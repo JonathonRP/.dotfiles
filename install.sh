@@ -17,16 +17,13 @@ stow vim
 sudo apt install vim
 
 # install nodejs
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-  sudo apt-get install -y nodejs
+curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-sudo npm install -g n
+sudo nvm install --lts
 
-sudo n install 10.9.0
+sudo nvm install node
 
-sudo n install 14.0.0
-
-sudo n use 14.0.0
+sudo nvm use node
 
 # install npm dev tools
 sudo npm install -g typescript sass gulp
