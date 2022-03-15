@@ -12,6 +12,8 @@ set -g tide_cmd_duration_color 000000
 set -g tide_context_bg_color 444444
 set -g tide_dotnet_bg_color dfd8f7
 set -g tide_dotnet_color 505050
+set -g tide_dotnet_icon \ue70c
+set -g tide_git_icon ' '
 set -g tide_git_bg_color 268bd2
 set -g tide_git_bg_color_unstable 268bd2
 set -g tide_git_bg_color_urgent 268bd2
@@ -38,7 +40,7 @@ set -g tide_os_bg_color CED7CF
 set -g tide_os_color 080808
 set -g tide_php_bg_color 75507B
 set -g tide_php_color 000000
-set -g tide_prompt_add_newline_before false
+set -g tide_prompt_add_newline_before true
 set -g tide_prompt_min_cols 26
 set -g tide_prompt_pad_items true
 set -g tide_pwd_bg_color 444444
