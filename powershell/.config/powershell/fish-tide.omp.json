@@ -83,7 +83,7 @@
 				{
 					"type": "dotnet",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#111111",
 					"background": "#600186",
@@ -97,7 +97,7 @@
 				{
 					"type": "node",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#111111",
 					"background": "#0d8a01",
@@ -109,7 +109,7 @@
 				{
 					"type": "go",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#111111",
 					"background": "#00badb",
@@ -121,7 +121,7 @@
 				{
 					"type": "julia",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#111111",
 					"background": "#00218b",
@@ -133,7 +133,7 @@
 				{
 					"type": "python",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#00488b",
 					"background": "#e7eb00",
@@ -147,7 +147,7 @@
 				{
 					"type": "ruby",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#ffffff",
 					"background": "#AE1401",
@@ -160,7 +160,7 @@
 				{
 					"type": "azfunc",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#ffffff",
 					"background": "#FEAC19",
@@ -173,7 +173,7 @@
 				{
 					"type": "aws",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#ffffff",
 					"background_templates": [
@@ -188,7 +188,7 @@
 				{
 					"type": "root",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#111111",
 					"background": "#ffff66",
@@ -199,7 +199,7 @@
 				{
 					"type": "executiontime",
 					"style": "powerline",
-					"powerline_symbol": "",
+					"powerline_symbol": "\ue0ba ",
 					"invert_powerline": true,
 					"foreground": "#000000",
 					"background": "#b98c30",
