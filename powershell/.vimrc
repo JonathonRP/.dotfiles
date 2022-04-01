@@ -1,4 +1,6 @@
-" Set encoding to utf-8
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
 set encoding=utf-8
 
 " Enable syntax highlighting
@@ -20,6 +22,8 @@ filetype indent plugin on
 " Add line numbers
 set number
 
+set relativenumber
+
 " shows column, & line number in bottom right 
 set ruler
 
@@ -29,7 +33,7 @@ set cursorline
 " Highlight cursor line underneath the cursor vertically.
 "set cursorcolumn
 
-call plug#begin('$HOME/.vim/plugged')
+call plug#begin('$HOME/vimfiles/plugged')
 Plug 'mhartington/oceanic-next'   
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -72,6 +76,19 @@ nnoremap <silent>sf :<C-u>Defx -listed -resume
   "\ -toggle
   \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 nnoremap <silent>fi :<c-u>Defx -new `expand('%:p:h')` search=`expand('%:p')`<CR>
+
+noremap! kj <C-C>
+noremap! jk <C-C>
+vnoremap kj <C-C>
+vnoremap jk <C-C>
+
+noremap j j
+noremap k k
+noremap l h
+noremap ; l
+
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+nnoremap <Leader>vr :source $MYVIMRC<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
