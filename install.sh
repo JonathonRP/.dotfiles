@@ -17,16 +17,16 @@ stow vim
 sudo apt install vim
 
 # install nodejs
-curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+# curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-sudo nvm install --lts
+# sudo nvm install --lts
 
-sudo nvm install node
+# sudo nvm install node
 
-sudo nvm use node
+# sudo nvm use node
 
 # install npm dev tools
-sudo npm install -g typescript sass gulp
+# sudo npm install -g typescript sass gulp
 
 command -v fish | sudo tree -a /ect/shells
 
