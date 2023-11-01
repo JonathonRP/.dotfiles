@@ -53,7 +53,7 @@ stow vim
 sudo apt update && sudo apt install fontconfig -y
 
 font_list=("DaddyTimeMono")
-for font_name in font_list
+for font_name in $font_list
 do
   echo "Starting download ${font_name} nerd font"
   if [ -n "$font_name" ]; then
