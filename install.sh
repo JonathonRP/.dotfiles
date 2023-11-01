@@ -66,5 +66,5 @@ select font_name in "${font_list[@]}" "Quit";
       # ./install.sh DaddyTimeMono
       # cd .. && rm -rf fonts
       break
-    if
+    fi
   done
