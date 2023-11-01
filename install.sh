@@ -1,7 +1,8 @@
 #!/bin/bash
 
+DEBIAN_FRONTEND=noninteractive
 # install deps
-sudo apt update && sudo apt install curl -y
+sudo apt update -q --no-allow-insecure-repositories && sudo apt install curl -y --no-install-recommends
 
 # install fish shell
 # sudo apt-add-repository ppa:fish-shell/release-3
@@ -9,10 +10,10 @@ sudo apt update && sudo apt install curl -y
 # sudo apt install fish
 
 # install ll on steroids
-sudo apt-get update && apt-get install exa -y
+sudo apt-get update -q --no-allow-insecure-repositories && apt-get install exa -y --no-install-recommends
 
 # install stow dotfiles manager
-sudo apt-get update && apt-get install stow -y
+sudo apt-get update -q --no-allow-insecure-repositories && apt-get install stow -y --no-install-recommends
 
 # stow fish from .dotfiles
 stow fish
@@ -50,7 +51,7 @@ stow vim
 
 # font install
 # nerdfont fonts for fish shell theme
-sudo apt update && sudo apt install fontconfig -y
+sudo apt update -q --no-allow-insecure-repositories && sudo apt install fontconfig -y --no-install-recommends
 
 font_list=("DaddyTimeMono")
 for font_name in $font_list
