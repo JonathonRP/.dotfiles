@@ -51,25 +51,28 @@ stow vim
 # font install
 # nerdfont fonts for fish shell theme
 sudo apt update && sudo apt install fontconfig -y
+bash -c  $(
 font_list=("DaddyTimeMono")
 select font_name in "${font_list[@]}" "Quit";
   do
     echo "Starting download $font_name nerd font"
-    if [ -n "$font_name" ]; then
-      echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-      curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-      echo "creating fonts folder: ~/.local/share/fonts"
-      mkdir ~/.local/share/fonts
-      echo "unzip the $font_name.zip"
-      unzip "$font_name.zip" -d "~/.local/share/fonts/"
-      fc-cache ~/.local/share/fonts
-      rm -rf "$font_name.zip"
-      echo "done!"
-      
-      # git clone https://github.com/ryanoasis/nerd-fonts.git fonts --depth 1
-      # cd fonts
-      # ./install.sh DaddyTimeMono
-      # cd .. && rm -rf fonts
-      break
+    if [ -n "$font_name" ]
+      then
+        echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+        curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+        echo "creating fonts folder: ~/.local/share/fonts"
+        mkdir ~/.local/share/fonts
+        echo "unzip the $font_name.zip"
+        unzip "$font_name.zip" -d "~/.local/share/fonts/"
+        fc-cache ~/.local/share/fonts
+        rm -rf "$font_name.zip"
+        echo "done!"
+        
+        # git clone https://github.com/ryanoasis/nerd-fonts.git fonts --depth 1
+        # cd fonts
+        # ./install.sh DaddyTimeMono
+        # cd .. && rm -rf fonts
+        break
     fi
   done
+) 0
