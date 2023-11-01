@@ -6,7 +6,7 @@
 # nerdfont fonts for fish shell theme
 git clone https://github.com/ryanoasis/nerd-fonts/fonts.git
 cd fonts
-./install.sh
+./install.sh DaddyTimeMono
 cd .. && rm -rf fonts
 
 # install ll on steroids
