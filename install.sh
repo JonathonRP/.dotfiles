@@ -47,7 +47,7 @@ sudo apt update && sudo apt install fontconfig -y
 
 # nerdfont fonts for fish shell theme
 font_list=("DaddyTimeMono")
-select font_name in "${fons_list[@]}" "Quit";
+select font_name in "${font_list[@]}" "Quit";
   do
     if [ -n "$font_name" ]; then
       curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
