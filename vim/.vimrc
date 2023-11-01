@@ -73,6 +73,19 @@ nnoremap <silent>sf :<C-u>Defx -listed -resume
   \ `expand('%:p:h')` -search=`expand('%:p')`<CR>
 nnoremap <silent>fi :<c-u>Defx -new `expand('%:p:h')` search=`expand('%:p')`<CR>
 
+noremap! kj <C-C>
+noremap! jk <C-C>
+vnoremap kj <C-C>
+vnoremap jk <C-C>
+
+noremap j j
+noremap k k
+noremap l h
+noremap ; l
+
+nnoremap <Leader>ve :e $MYVIMRC<CR>
+nnoremap <Leader>vr :source $MYVIMRC<CR>
+
 autocmd FileType defx call s:defx_my_settings()
 	function! s:defx_my_settings() abort
 	  " Define mappings
