@@ -3,6 +3,12 @@
 # sudo apt update
 # sudo apt install fish
 
+# nerdfont fonts for fish shell theme
+git clone https://github.com/ryanoasis/nerd-fonts/fonts.git
+cd fonts
+./install.sh
+cd .. && rm -rf fonts
+
 # install ll on steroids
 sudo apt-get install exa
 
