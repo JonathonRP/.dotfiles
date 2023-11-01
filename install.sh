@@ -7,7 +7,7 @@
 git clone https://github.com/ryanoasis/nerd-fonts.git:fonts --depth 1
 cd fonts
 ./install.sh DaddyTimeMono
-cd .. && rm -rf /fonts
+cd .. && rm -rf fonts
 
 # install ll on steroids
 sudo apt-get install exa
