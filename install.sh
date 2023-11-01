@@ -54,12 +54,17 @@ sudo apt update && sudo apt install fontconfig -y
 font_list=("DaddyTimeMono")
 select font_name in "${font_list[@]}" "Quit";
   do
+    echo "Starting download $font_name nerd font"
     if [ -n "$font_name" ]; then
+      echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
       curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
+      echo "creating fonts folder: ~/.local/share/fonts"
       mkdir ~/.local/share/fonts
-      unzip "$font_name.zip" -d "~/.local/share/fonts/$font_name"
+      echo "unzip the $font_name.zip"
+      unzip "$font_name.zip" -d "~/.local/share/fonts/"
       fc-cache ~/.local/share/fonts
       rm -rf "$font_name.zip"
+      echo "done!"
       
       # git clone https://github.com/ryanoasis/nerd-fonts.git fonts --depth 1
       # cd fonts
