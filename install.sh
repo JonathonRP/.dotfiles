@@ -61,9 +61,9 @@ do
       echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${font_name}.zip"
       curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${font_name}.zip"
       echo "creating fonts folder: ~/.local/share/fonts"
-      mkdir "~/.local/share/fonts"
+      mkdir ~/.local/share/fonts
       echo "unzip the ${font_name}.zip"
-      unzip "${font_name}.zip" -d "~/.local/share/fonts/"
+      unzip "${font_name}.zip" -d ~/.local/share/fonts/
       fc-cache ~/.local/share/fonts
       rm -rf "${font_name}.zip"
       echo "done!"
