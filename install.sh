@@ -4,7 +4,7 @@
 # sudo apt install fish
 
 # nerdfont fonts for fish shell theme
-git clone https://github.com/ryanoasis/nerd-fonts/fonts.git
+git clone https://github.com/ryanoasis/nerd-fonts.git
 cd fonts
 ./install.sh DaddyTimeMono
 cd .. && rm -rf fonts
