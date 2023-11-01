@@ -1,27 +1,30 @@
+# install deps
+sudo apt update && sudo apt install curl -y
+
 # install fish shell
 # sudo apt-add-repository ppa:fish-shell/release-3
 # sudo apt update
 # sudo apt install fish
 
 # install ll on steroids
-sudo apt-get install exa
+sudo apt-get update && apt-get install exa -y
 
 # install stow dotfiles manager
-sudo apt-get install -y stow
+sudo apt-get update && apt-get install stow -y
 
 # stow fish from .dotfiles
 stow fish
 
 # command -v fish | sudo tree -a /ect/shells
 
+# install plugins
+fisher update
+
 # set default shell to fish
 sudo chsh -s $(which fish) $USER
 
 # install fisher fish minimal package manager
 # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-# install plugins
-fisher update
 
 # stow vim from .dotfiles
 stow vim
@@ -43,9 +46,9 @@ stow vim
 # install npm dev tools
 # sudo npm install -g typescript sass gulp
 
-sudo apt update && sudo apt install fontconfig -y
-
+# font install
 # nerdfont fonts for fish shell theme
+sudo apt update && sudo apt install fontconfig -y
 font_list=("DaddyTimeMono")
 select font_name in "${font_list[@]}" "Quit";
   do
