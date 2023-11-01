@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # install deps
 sudo apt update && sudo apt install curl -y
 
