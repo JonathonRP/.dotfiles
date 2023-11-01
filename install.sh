@@ -1,13 +1,13 @@
 # install fish shell
-sudo apt-add-repository ppa:fish-shell/release-3
-sudo apt update
-sudo apt install fish
+# sudo apt-add-repository ppa:fish-shell/release-3
+# sudo apt update
+# sudo apt install fish
 
 # install ll on steroids
-apt-get install exa
+sudo apt-get install exa
 
 # install stow dotfiles manager
-apt-get install -y stow
+sudo apt-get install -y stow
 
 # stow files in .dotfiles
 stow fish
