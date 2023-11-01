@@ -4,9 +4,7 @@
 # sudo apt install fish
 
 # nerdfont fonts for fish shell theme
-git clone https://github.com/ryanoasis/nerd-fonts.git
-./install.sh DaddyTimeMono
-cd .. && rm -rf fonts
+git clone https://github.com/ryanoasis/nerd-fonts.git/install.sh DaddyTimeMono
 
 # install ll on steroids
 sudo apt-get install exa
