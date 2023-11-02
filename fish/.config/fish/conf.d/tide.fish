@@ -13,7 +13,7 @@ set -g tide_context_bg_color 444444
 set -g tide_dotnet_bg_color dfd8f7
 set -g tide_dotnet_color 505050
 set -g tide_dotnet_icon \ue70c
-set -g tide_git_icon ' '
+set -g tide_git_icon 
 set -g tide_git_bg_color 268bd2
 set -g tide_git_bg_color_unstable 268bd2
 set -g tide_git_bg_color_urgent 268bd2
