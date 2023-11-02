@@ -1,3 +1,5 @@
+#!/bin/bash
+
 DEBIAN_FRONTEND=noninteractive
 
 # install fish shell
