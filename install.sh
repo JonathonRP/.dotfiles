@@ -40,9 +40,10 @@ apt install exa
 # install stow dotfiles manager
 sudo apt stow
 
-# stow fish from .dotfiles
-stow fish
+# stow from .dotfiles
+stow fish vim
 
+# fish setup
 # command -v fish | sudo tree -a /ect/shells
 
 # install plugins
@@ -54,10 +55,7 @@ sudo chsh -s $(which fish) $USER
 # install fisher fish minimal package manager
 # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
-# stow vim from .dotfiles
-stow vim
-
-# install vim
+# vim setup
 # apt-get install vim
 
 # vim -c ":PlugInstall"
