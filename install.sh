@@ -2,7 +2,7 @@
 
 DEBIAN_FRONTEND=noninteractive
 # install deps
-sudo apt-get update -q --no-allow-insecure-repositories && sudo apt-get install curl -y --no-install-recommends
+# sudo apt-get update -q --no-allow-insecure-repositories && sudo apt-get install curl -y --no-install-recommends
 
 # font install
 # nerdfont fonts for fish shell theme
