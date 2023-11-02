@@ -35,10 +35,10 @@ DEBIAN_FRONTEND=noninteractive
 # sudo apt install fish
 
 # install ll on steroids
-sudo apt-get install exa -y
+apt install exa
 
 # install stow dotfiles manager
-sudo apt-get install stow -y
+sudo apt stow
 
 # stow fish from .dotfiles
 stow fish
