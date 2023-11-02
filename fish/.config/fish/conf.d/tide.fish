@@ -47,8 +47,8 @@ set -g tide_pwd_bg_color 444444
 set -g tide_pwd_color_anchors E4E4E4
 set -g tide_pwd_color_dirs a4a4a4
 set -g tide_pwd_color_truncated_dirs BCBCBC
-# set -g tide_right_prompt_items status cmd_duration context jobs dotnet node virtual_env vi_mode time
-set -g tide_right_prompt_items status cmd_duration context jobs node virtual_env vi_mode time
+set -g tide_right_prompt_items status cmd_duration context jobs dotnet node virtual_env vi_mode time
+# set -g tide_right_prompt_items status cmd_duration context jobs node virtual_env vi_mode time
 set -g tide_right_prompt_prefix \ue0b2
 set -g tide_right_prompt_separator_diff_color \ue0ba' '
 set -g tide_right_prompt_separator_same_color \ue0b3
@@ -73,5 +73,5 @@ set -g tide_vi_mode_icon_replace REPLACE
 set -g tide_vi_mode_icon_visual VISUAL
 set -g tide_virtual_env_bg_color 444444
 
-# set -g tide_dotnet_bg_color 600186
-# set -g tide_dotnet_color 000000
+set -g tide_dotnet_bg_color 600186
+set -g tide_dotnet_color 000000
