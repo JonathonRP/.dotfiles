@@ -21,7 +21,7 @@ stow
 # apt-get install vim
 
 # install nerdfont fonts for fish shell theme
-font_list=("DaddyTimeMono")
+font_list=("Meslo")
 for font_name in $font_list
 do
   echo "Starting download ${font_name} nerd font"
