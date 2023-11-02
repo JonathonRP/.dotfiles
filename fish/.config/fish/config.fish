@@ -29,7 +29,3 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
-
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
