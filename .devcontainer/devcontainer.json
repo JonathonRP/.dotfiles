@@ -1,6 +1,6 @@
 {
     "name": "dotfiles",
-    "image": "mcr.microsoft.com/devcontainers/base:jimmy",
+    "image": "mcr.microsoft.com/devcontainers/base:jammy",
     "features": {
         "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
     },
