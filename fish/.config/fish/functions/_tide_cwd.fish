@@ -38,5 +38,5 @@ eval "function _tide_pwd
         end
     end
 
-    string join -- / \"$reset_to_color_dirs\" \$split_output[2..]
+    string join -- / \"$reset_to_color_dirs\cwd\" \$split_output[2..]
 end"
