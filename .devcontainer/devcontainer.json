@@ -2,7 +2,9 @@
     "name": "dotfiles",
     "image": "mcr.microsoft.com/devcontainers/base:jammy",
     "features": {
-        "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {}
+        "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {
+			"fisher": false
+		}
     },
 
     "customizations": {

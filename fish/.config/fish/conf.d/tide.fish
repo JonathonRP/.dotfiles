@@ -29,7 +29,7 @@ set -g tide_jobs_bg_color 444444
 set -g tide_jobs_color 4E9A06
 # set -g tide_left_prompt_frame_enabled true
 set -g tide_left_prompt_frame_enabled false
-set -g tide_left_prompt_items pwd git newline character
+set -g tide_left_prompt_items cwd git newline character
 set -g tide_left_prompt_prefix \ue0b6
 set -g tide_left_prompt_separator_diff_color \ue0bc
 set -g tide_left_prompt_separator_same_color \ue0b1
