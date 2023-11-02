@@ -44,13 +44,15 @@ done
 # stow from .dotfiles
 stow vim fish --adopt
 
-# fish setup
+# ---fish setup---
+
 # command -v fish | sudo tree -a /ect/shells
-fisher update
+# fisher update
+
 # set default shell to fish
 sudo chsh -s $(which fish) $USER
 
-# vim setup
+# ---vim setup---
 # vim -c ":PlugInstall"
 
 # dev setup
