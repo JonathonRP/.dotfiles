@@ -48,7 +48,7 @@ set -g tide_pwd_color_anchors E4E4E4
 set -g tide_pwd_color_dirs a4a4a4
 set -g tide_pwd_color_truncated_dirs BCBCBC
 set -g tide_right_prompt_items status cmd_duration context jobs dotnet node vi_mode time
-# set -g tide_right_prompt_items status cmd_duration context jobs node virtual_env vi_mode time
+# set -g tide_right_prompt_items status cmd_duration context jobs node vi_mode time
 set -g tide_right_prompt_prefix \ue0b2
 set -g tide_right_prompt_separator_diff_color \ue0ba
 set -g tide_right_prompt_separator_same_color \ue0b3
