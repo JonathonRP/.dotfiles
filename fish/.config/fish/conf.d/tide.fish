@@ -71,7 +71,7 @@ set -g tide_vi_mode_color_visual 000000
 set -g tide_vi_mode_icon_default DEFAULT
 set -g tide_vi_mode_icon_replace REPLACE
 set -g tide_vi_mode_icon_visual VISUAL
-set -g tide_virtual_env_bg_color 444444
+# set -g tide_virtual_env_bg_color 444444
 
 set -g tide_dotnet_bg_color 600186
 set -g tide_dotnet_color 000000
