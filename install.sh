@@ -45,7 +45,7 @@ do
 done
 
 # stow from .dotfiles
-stow fish vim
+stow vim fish
 
 # fish setup
 # command -v fish | sudo tree -a /ect/shells
