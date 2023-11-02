@@ -8,9 +8,9 @@ DEBIAN_FRONTEND=noninteractive
 # install deps
 sudo apt update -q --no-allow-insecure-repositories \
 && sudo apt install -y --no-install-recommends \
-curl
-fontconfig
-exa
+curl \
+fontconfig \
+exa \
 stow
 
 # install fisher fish minimal package manager
