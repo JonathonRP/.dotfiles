@@ -2,11 +2,6 @@
 
 DEBIAN_FRONTEND=noninteractive
 
-# install fish shell
-# sudo apt-add-repository ppa:fish-shell/release-3
-# sudo apt update
-# sudo apt install fish
-
 # install deps
 sudo apt update -q --no-allow-insecure-repositories \
 && sudo apt install -y --no-install-recommends \
@@ -14,11 +9,6 @@ curl \
 fontconfig \
 exa \
 stow
-
-# install fisher fish minimal package manager
-# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-
-# apt-get install vim
 
 # install nerdfont fonts for fish shell theme
 font_list=("Meslo")
@@ -45,14 +35,25 @@ done
 stow vim fish --adopt
 
 # ---fish setup---
-
+# install fish shell
+# sudo apt-add-repository ppa:fish-shell/release-3
+# sudo apt update
+# sudo apt install fish
 # command -v fish | sudo tree -a /ect/shells
 # fisher update
 
 # set default shell to fish
 sudo chsh -s $(which fish) $USER
 
+# install fisher fish minimal package manager
+fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
+
+if [ "${USERNAME}" != "root" ]; then
+  su $USERNAME -c 'fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"'
+fi
+
 # ---vim setup---
+# apt-get install vim
 # vim -c ":PlugInstall"
 
 # dev setup
