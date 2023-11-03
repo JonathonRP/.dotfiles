@@ -9,6 +9,13 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
+fundle plugin 'jorgebucaran/fisher'
+fundle plugin 'ilancosman/tide@v6'
+fundle plugin 'jethrokuan/z'
+fundle plugin 'joseluisq/gitnow'
+
+fundle init
+
 # aliases
 alias ls "ls -p -G"
 alias la "ls -A"
