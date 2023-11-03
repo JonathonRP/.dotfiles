@@ -9,19 +9,17 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
-fundle plugin 'jorgebucaran/fisher'
-fundle plugin 'ilancosman/tide@v6'
-fundle plugin 'jethrokuan/z'
-fundle plugin 'joseluisq/gitnow'
-
-fundle init
-
 # aliases
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
 alias g git
+
+set PLUGINS_CONFIG (dirname (status --current-filename))/config-plugins.fish
+if test -f $PLUGINS_CONFIG
+  source $PLUGINS_CONFIG
+end
 
 switch (uname)
   case Darwin
