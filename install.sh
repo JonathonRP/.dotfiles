@@ -39,11 +39,10 @@ stow vim fish --adopt
 # sudo apt-add-repository ppa:fish-shell/release-3
 # sudo apt update
 # sudo apt install fish
-# command -v fish | sudo tree -a /ect/shells
-# fisher update
 
 # set default shell to fish
-sudo chsh -s $(which fish) $USER
+# command -v fish | sudo tree -a /ect/shells
+# sudo chsh -s $(which fish) $USER
 
 # install fisher fish minimal package manager
 # fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
