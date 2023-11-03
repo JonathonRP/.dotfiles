@@ -17,9 +17,9 @@ do
   echo "Starting download ${font_name} nerd font"
   if [ -n "$font_name" ]; then
       curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/${font_name}.zip"
-      mkdir ~/.local/share/fonts
-      unzip "${font_name}.zip" -d ~/.local/share/fonts/
-      fc-cache ~/.local/share/fonts
+      mkdir /.local/share/fonts
+      unzip "${font_name}.zip" -d /.local/share/fonts/
+      fc-cache /.local/share/fonts
       rm -rf "${font_name}.zip"
       echo "done!"
       
