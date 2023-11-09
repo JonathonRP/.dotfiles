@@ -20,7 +20,7 @@
 				"dotfiles.targetPath": "~/dotfiles",
 
 				"editor.fontFamily": "'cascadia code', Consolas, 'Courier New', monospace",
-				"terminal.integrated.fontFamily": "'MesloLGS NF'",
+				"terminal.integrated.fontFamily": "'MesloLGM NF'",
 				"terminal.integrated.defaultProfile.linux": "fish",
 				"terminal.integrated.profiles.linux": {
 					"bash": {
