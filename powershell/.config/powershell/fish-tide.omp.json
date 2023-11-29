@@ -82,7 +82,7 @@
           "foreground": "#111111",
           "background": "#0d8a01",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} \uf898 ",
+          "template": "{{ if .PackageManagerIcon }} {{ .PackageManagerIcon }}{{ end }}{{ .Full }} \uf898 ",
           "properties": {
             "fetch_version": true
           }
@@ -94,7 +94,7 @@
           "foreground": "#111111",
           "background": "#00badb",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
+          "template": "{{ if .Error }} {{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue627 ",
           "properties": {
             "fetch_version": true
           }
@@ -106,7 +106,7 @@
           "foreground": "#111111",
           "background": "#00218b",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue624 ",
+          "template": "{{ if .Error }} {{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue624 ",
           "properties": {
             "fetch_version": true
           }
@@ -118,7 +118,7 @@
           "foreground": "#00488b",
           "background": "#e7eb00",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} \ue235 ",
+          "template": "{{ if .Error }} {{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }} \ue235 ",
           "properties": {
             "display_mode": "files",
             "fetch_version": true,
@@ -132,7 +132,7 @@
           "foreground": "#ffffff",
           "background": "#AE1401",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
+          "template": "{{ if .Error }} {{ .Error }}{{ else }}{{ .Full }}{{ end }} \ue791 ",
           "properties": {
             "display_mode": "files",
             "fetch_version": true
@@ -145,7 +145,7 @@
           "foreground": "#ffffff",
           "background": "#FEAC19",
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7 ",
+          "template": "{{ if .Error }} {{ .Error }}{{ else }}{{ .Full }}{{ end }} \uf0e7 ",
           "properties": {
             "display_mode": "files",
             "fetch_version": false
@@ -161,7 +161,7 @@
             "{{if contains \"jan\" .Profile}}#f1184c{{end}}"
           ],
           "leading_diamond": "<parentBackground>\ue0bc</>",
-          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue7ad ",
+          "template": " {{ .Profile }}{{ if .Region }}@{{ .Region }}{{ end }} \ue8ad ",
           "properties": {
             "display_default": false
           }
