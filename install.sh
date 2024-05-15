@@ -72,4 +72,4 @@ stow vim fish --adopt
 # install npm dev tools
 # sudo npm install -g typescript sass gulp
 
-git restore
+git restore .
