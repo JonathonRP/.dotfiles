@@ -35,7 +35,7 @@
   ],
   "workbench.iconTheme": "vscode-icons",
   "zenMode.showTabs":"single",
-  "zenMode.fullScreen":false,
+  "zenMode.fullScreen": false,
   "git.autofetch": true,
   "vim.vimrc.enable": true,
   "console-ninja.captureFunctions": true,
@@ -75,9 +75,7 @@
   "dev.containers.workspaceMountConsistency": "consistent",
   "dev.containers.mountWaylandSocket": false,
   "console-ninja.featureSet": "Community",
-  "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
   "gitlens.gitCommands.skipConfirmations": ["fetch:command", "switch:command"],
-  "workbench.colorTheme": "Winter is Coming (Dark Black)",
   "explorer.compactFolders": false,
   "vitest.commandLine": "pnpm test",
   "vitest.enable": true,
@@ -117,5 +115,48 @@
 			"path": "pwsh",
 			"icon": "terminal-powershell"
 		}
-	}
+  },
+  "apc.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+  "apc.monospace.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+  "apc.electron": {
+    "frame": false,
+  },
+  "workbench.colorTheme": "Night Owl",
+  "workbench.colorCustomizations": {
+    "[Winter is Coming (Dark Black)]": {
+      "editor.background": "#00000000",
+      "activityBar.background": "#28282200",
+      "activityBar.border": "#00000000",
+      "editorGroup.border": "#102a4400",
+      "sideBar.background": "#28282200",
+      "sideBar.border": "#102a44",
+      "sideBar.foreground": "#8BADC180"
+    },
+    "[Night Owl]": {
+      "activityBar.background": "#000C1D",
+      "activityBar.border": "#102a4400",
+      "editorGroup.border": "#102a4400",
+      // "sideBar.background": "#001122",
+      "widget.border": "#00000000",
+      "sideBar.border": "#102a4400",
+      "editorGroupHeader.border": "#00000000",
+      "sideBar.foreground": "#8BADC1",
+      "editorWidget.border":"#5f7e9700",
+      "tab.border": "#272b3b00",
+      "tab.activeBorderTop": "#00000000",
+      "panel.border": "#5f7e9700",
+      "panelSectionHeader.border": "#122d4200",
+      "editorOverviewRuler.border": "#00000000",
+      "editorGroupHeader.tabsBorder": "#262a3900"
+    },
+    "[Night Owl (No Italics)]": {
+      "activityBar.background": "#000C1D",
+      "activityBar.border": "#102a44",
+      "editorGroup.border": "#102a44",
+      "sideBar.background": "#001122",
+      "sideBar.border": "#102a44",
+      "sideBar.foreground": "#8BADC1"
+    }
+  },
+  "glassit.alpha": 245,
 }
