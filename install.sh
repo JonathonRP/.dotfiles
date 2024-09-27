@@ -45,7 +45,6 @@ ls
 tar xf lazygit.tar.gz -C lazygit-cli --strip-components 1
 echo "installing lazygit"
 sudo install lazygit-cli/lazygit /usr/local/bin
-cd ../
 
 # stow from .dotfiles
 stow vim lazygit gitcz fish --adopt
