@@ -87,4 +87,9 @@ stow vim lazygit gitcz fish --adopt
 # install npm dev tools
 # sudo npm install -g typescript sass gulp
 
+if command -v npm 2>&1 >/dev/null
+then
+    npm install -g git-cz
+fi
+
 git restore .
