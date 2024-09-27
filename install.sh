@@ -37,13 +37,14 @@ done
 #   tar xf lazygit.tar.gz lazygit
 #   sudo install lazygit /usr/local/bin
 
+mkdir lazygit-cli
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 echo "downloading lazygit ${LAZYGET_VERSION} at"
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 ls
-tar -xzf lazygit.tar.gz lazygit-cli
+tar xf lazygit.tar.gz lazygit -C lazygit-cli --strip-components 1
 echo "installing lazygit"
-sudo install lazygit-cli /usr/local/bin
+sudo install lazygit-cli/lazygit /usr/local/bin
 rm lazygit.tar.gz
 rm -rf lazygit-cli
 
