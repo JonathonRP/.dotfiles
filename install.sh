@@ -32,7 +32,7 @@ do
 done
 
 # stow from .dotfiles
-stow vim lazygit fish --adopt
+stow vim lazygit vsCode fish --adopt
 
 # ---fish setup---
 # install fish shell
