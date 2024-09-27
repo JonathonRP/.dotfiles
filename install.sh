@@ -44,7 +44,7 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 ls
 tar xf lazygit.tar.gz -C lazygit-cli --strip-components 1
 echo "installing lazygit"
-sudo install lazygit-cli/lazygit /usr/local/bin
+sudo install lazygit-cli /usr/local/bin
 
 # stow from .dotfiles
 stow vim lazygit gitcz fish --adopt
