@@ -43,6 +43,8 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar -xzf lazygit.tar.gz lazygit
 echo "installing lazygit"
 sudo install lazygit /usr/local/bin
+rm lazygit.tar.gz
+rm -rf lazygit
 
 # stow from .dotfiles
 stow vim lazygit gitcz fish --adopt
