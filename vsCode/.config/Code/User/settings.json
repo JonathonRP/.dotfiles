@@ -35,6 +35,7 @@
   ],
   "workbench.iconTheme": "vscode-icons",
   "zenMode.showTabs":"single",
+  "zenMode.fullScreen":false,
   "git.autofetch": true,
   "vim.vimrc.enable": true,
   "console-ninja.captureFunctions": true,
