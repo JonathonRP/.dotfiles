@@ -45,6 +45,7 @@ ls
 tar xf lazygit.tar.gz lazygit -C lazygit-cli --strip-components 1
 echo "installing lazygit"
 cd lazygit-cli
+ls
 sudo install lazygit /usr/local/bin
 cd ../
 
