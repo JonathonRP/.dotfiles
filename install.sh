@@ -47,7 +47,7 @@ echo "installing lazygit"
 sudo install lazygit /usr/local/bin
 
 # stow from .dotfiles
-stow vim lazygit fish --adopt
+stow vim lazygit gitcz fish --adopt
 
 # ---fish setup---
 # install fish shell
