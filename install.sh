@@ -42,12 +42,9 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 echo "downloading lazygit ${LAZYGET_VERSION} at"
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 ls
-tar xf lazygit.tar.gz lazygit -C lazygit-cli --strip-components 1
-echo "go into dir"
-cd lazygit-cli
-ls
+tar xf lazygit.tar.gz -C lazygit-cli --strip-components 1
 echo "installing lazygit"
-sudo install lazygit /usr/local/bin
+sudo install lazygit-cli/lazygit /usr/local/bin
 cd ../
 
 # stow from .dotfiles
