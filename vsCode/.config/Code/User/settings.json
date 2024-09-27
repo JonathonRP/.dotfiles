@@ -1,3 +1,120 @@
 {
-  
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "workbench.iconTheme": "vscode-icons",
+  "zenMode.showTabs":"single",
+  "git.autofetch": true,
+  "vim.vimrc.enable": true,
+  "console-ninja.captureFunctions": true,
+  "todo-tree.highlights.enabled": false,
+  "workbench.sideBar.location": "right",
+  "terminal.integrated.env.linux": {},
+  "colorInfo.languages": [
+    {
+      "selector": "css",
+      "colors": "css"
+    },
+    {
+      "selector": "sass",
+      "colors": "css"
+    },
+    {
+      "selector": "scss",
+      "colors": "css"
+    },
+    {
+      "selector": "less",
+      "colors": "css"
+    }
+  ],
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.fontLigatures": "'calt', 'ss01'",
+  "editor.minimap.autohide": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 3,
+  "mermaid.vscode.minimap": false,
+  "color-highlight.matchRgbWithNoFunction": true,
+  "color-highlight.markerType": "dot-before",
+  "color-highlight.languages": ["*"],
+  "colorize.hide_current_line_decorations": false,
+  "colorize.enable_search_variables": false,
+  "editor.defaultColorDecorators": true,
+  "dev.containers.workspaceMountConsistency": "consistent",
+  "dev.containers.mountWaylandSocket": false,
+  "console-ninja.featureSet": "Community",
+  "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
+  "gitlens.gitCommands.skipConfirmations": ["fetch:command", "switch:command"],
+  "workbench.colorTheme": "Winter is Coming (Dark Black)",
+  "explorer.compactFolders": false,
+  "vitest.commandLine": "pnpm test",
+  "vitest.enable": true,
+  "svelte.enable-ts-plugin": true,
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.matchWords": true,
+  "color-highlight.useARGB": true,
+  "supermaven.enable": {
+    "*": true
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "astro.content-intellisense": true,
+  "git.ignoreRebaseWarning": true,
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
+	"dotfiles.targetPath": "~/dotfiles",
+	"editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+	"terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash",
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "zsh"
+		},
+		"fish": {
+			"path": "fish",
+			"icon": "terminal-linux"
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux"
+		},
+		"pwsh": {
+			"path": "pwsh",
+			"icon": "terminal-powershell"
+		}
+	}
 }
