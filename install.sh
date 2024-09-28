@@ -36,17 +36,17 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 
 echo "downloading lazygit ${LAZYGET_VERSION}"
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz --transform 's-cli' lazygit
+tar xf lazygit.tar.gz --transform 's,/lazygit$,/lazy-cli,' lazygit
 
 echo "installing lazygit-cli"
-sudo install lazygit_cli /usr/local/bin
+sudo install lazygit-cli /usr/local/bin
 
 # stow from .dotfiles
 stow vim lazygit gitcz fish --adopt
 
 # clean up lazygit
 rm lazygit.tar.gz
-rm -rf lazygit_cli
+rm -rf lazygit-cli
 
 # ---fish setup---
 # install fish shell
