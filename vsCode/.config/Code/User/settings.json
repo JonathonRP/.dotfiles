@@ -119,37 +119,101 @@
   "apc.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.monospace.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.electron": {
-    "frame": false,
+    "backgroundMaterial": "acrylic",
+    "backgroundColor": "#00000000",
+    "transparent": true,
+    "vibrancy": "ultra-dark",
+    "opacity": 0.75,
+    "visualEffectState": "active"
   },
-  "workbench.colorTheme": "Night Owl",
-  "workbench.colorCustomizations": {
-    "[Winter is Coming (Dark Black)]": {
-      "editor.background": "#00000000",
-      "activityBar.background": "#28282200",
-      "activityBar.border": "#00000000",
-      "editorGroup.border": "#102a4400",
-      "sideBar.background": "#28282200",
-      "sideBar.border": "#102a44",
-      "sideBar.foreground": "#8BADC180"
+  "apc.stylesheet": {
+    ".slider": {
+      "width": "2px !important",
+      "right": "1px !important",
+      "left": "auto !important"
     },
+    ".command-center-center": {
+      "border": "none !important",
+      "background": "transparent !important",
+      "width": "auto !important"
+    },
+    ".titlebar-left": {
+      "justify-content": "flex-start !important",
+      "flex-grow": "0 !important",
+      "width": "auto !important"
+    },
+    ".search-label": {
+      "font-size": "14px !important",
+    },
+    ".search-icon": {
+      "display": "none !important"
+    },
+    ".codicon-search::before": {
+      "display": "none !important"
+    },
+    ".codicon-arrow-right, .codicon-arrow-left": {
+      "display": "none !important"
+    },
+    ".titlebar-right > *": {
+      "display": "none !important"
+    },
+    ".quick-input-widget.show-file-icons": {
+      "top": "20% !important"
+    },
+    ".quick-input-widget.show-file-icons .quick-input-header": {
+      "padding": "0 0 12px 0 !important"
+    },
+    ".quick-input-widget.show-file-icons .monaco-inputbox": {
+      "border-radius": "4px 4px 0 0 !important"
+    },
+    ".quick-input-widget.show-file-icons .monaco-inputbox.synthetic-focus": {
+      "outline": "none !important"
+    },
+    ".quick-input-widget.show-file-icons .monaco-inputbox input": {
+      "padding": "12px 16px !important",
+      "font-size": "16px !important"
+    },
+    ".quick-input-list .monaco-scrollable-element": {
+      "padding": "0 12px !important"
+    },
+    ".quick-input-action": {
+      "display": "none !important"
+    }
+  },
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorCustomizations": {
+    "sideBar.border": "#00000000",
+    "editorGroupHeader.border": "#00000000",
+    "panel.border": "#00000000",
+    "panelSectionHeader.border": "#00000000",
+    "editorOverviewRuler.border": "#00000000",
+    "editorGroupHeader.tabsBorder": "#00000000",
+    "sideBar.background": "#00000000",
+    "editorGroup.dropBackground": "#00000000",
+    "sideBarSectionHeader.background": "#00000000",
+    "panelStickyScroll.background": "#00000000",
+    "editorStickyScroll.shadow": "#010b1400",
+    "panelStickyScroll.shadow": "#010b1400",
+    "editorGroup.border": "#00000000",
     "[Night Owl]": {
       "activityBar.background": "#000C1D",
-      "activityBar.border": "#102a4400",
-      "editorGroup.border": "#102a4400",
-      // "sideBar.background": "#001122",
-      "widget.border": "#00000000",
+      "activityBar.border": "#102a44",
       "sideBar.border": "#102a4400",
       "editorGroupHeader.border": "#00000000",
       "sideBar.foreground": "#8BADC1",
-      "editorWidget.border":"#5f7e9700",
-      "tab.border": "#272b3b00",
-      "tab.activeBorderTop": "#00000000",
       "panel.border": "#5f7e9700",
       "panelSectionHeader.border": "#122d4200",
       "editorOverviewRuler.border": "#00000000",
-      "editorGroupHeader.tabsBorder": "#262a3900"
+      "editorGroupHeader.tabsBorder": "#262a3900",
+      "editor.background": "#01162700",
+      "sideBar.background": "#01162700",
+      "editorGroup.dropBackground": "#00000000",
+      "activityBarBadge.background": "#44596b00",
+      "sideBarSectionHeader.background": "#01162700",
+      "panelStickyScroll.background": "#01162700",
+      "editorStickyScroll.background": "#011627",
     },
-    "[Night Owl (No Italics)]": {
+    "[Night Owl (No Italics)]":  {
       "activityBar.background": "#000C1D",
       "activityBar.border": "#102a44",
       "editorGroup.border": "#102a44",
