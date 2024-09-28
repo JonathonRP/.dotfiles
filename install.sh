@@ -34,15 +34,16 @@ done
 # use lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 
-echo "downloading lazygit-cli ${LAZYGET_VERSION}"
+echo "setting up lazygit-cli"
 mkdir lazygit-cli
 cd ./lazygit-cli/
+
+echo "downloading lazygit-cli ${LAZYGET_VERSION}"
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 
 echo "installing lazygit-cli"
 sudo install lazygit /usr/local/bin
-
 cd ../
 
 # stow from .dotfiles
