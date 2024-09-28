@@ -116,14 +116,37 @@
 			"icon": "terminal-powershell"
 		}
   },
-  "apc.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
-  "apc.monospace.font.family": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+	"terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
+	"terminal.integrated.profiles.linux": {
+		"bash": {
+			"path": "bash",
+			"icon": "terminal-bash"
+		},
+		"zsh": {
+			"path": "zsh"
+		},
+		"fish": {
+			"path": "fish",
+			"icon": "terminal-linux"
+		},
+		"tmux": {
+			"path": "tmux",
+			"icon": "terminal-tmux"
+		},
+		"pwsh": {
+			"path": "pwsh",
+			"icon": "terminal-powershell"
+		}
+  },
+  "apc.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+  "apc.monospace.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.electron": {
     "backgroundMaterial": "acrylic",
     "backgroundColor": "#00000000",
     "transparent": true,
     "vibrancy": "ultra-dark",
-    "opacity": 0.75,
+    "opacity": 0.85,
     "visualEffectState": "active"
   },
   "apc.stylesheet": {
@@ -148,10 +171,10 @@
     ".search-icon": {
       "display": "none !important"
     },
-    ".codicon-search::before": {
-      "display": "none !important"
-    },
-    ".codicon-arrow-right, .codicon-arrow-left": {
+    // ".codicon-search::before": {
+    //   "display": "none !important"
+    // },
+    ".menu-entry .codicon-arrow-right, .menu-entry .codicon-arrow-left": {
       "display": "none !important"
     },
     ".titlebar-right > *": {
