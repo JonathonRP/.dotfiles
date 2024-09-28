@@ -51,7 +51,7 @@ stow vim lazygit gitcz fish --adopt
 
 # clean up lazygit
 rm lazygit.tar.gz
-rm -rf lazygit-cli
+# rm -rf lazygit-cli
 
 # ---fish setup---
 # install fish shell
