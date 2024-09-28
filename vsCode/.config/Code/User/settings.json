@@ -195,6 +195,10 @@
     "editorStickyScroll.shadow": "#010b1400",
     "panelStickyScroll.shadow": "#010b1400",
     "editorGroup.border": "#00000000",
+    "editorGroupHeader.noTabsBackground": "#00000000",
+    "editorGroupHeader.tabsBackground": "#00173300",
+    "panelSection.dropBackground": "#00000000",
+    "scrollbar.shadow": "#00000000",
     "[Night Owl]": {
       "activityBar.background": "#000C1D",
       "activityBar.border": "#102a44",
