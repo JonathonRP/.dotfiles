@@ -41,7 +41,7 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 
 echo "installing lazygit-cli"
-sudo install lazygit-cli /usr/local/bin
+sudo install lazygit /usr/local/bin
 
 cd ../
 
