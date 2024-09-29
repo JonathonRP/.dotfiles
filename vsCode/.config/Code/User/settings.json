@@ -160,38 +160,6 @@
   "totalTypeScript.hideBasicTips": true,
   "svelte.enable-ts-plugin": true,
 
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>"],
-      "commands": ["vspacecode.space"]
-    },
-    {
-      "before": [","],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>"],
-      "commands": ["vspacecode.space"]
-    },
-    {
-      "before": [","],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
-    }
-  ],
   "console-ninja.captureFunctions": true,
   "todo-tree.highlights.enabled": false,
   "colorInfo.languages": [
