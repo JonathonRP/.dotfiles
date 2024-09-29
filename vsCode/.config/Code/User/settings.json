@@ -1,6 +1,6 @@
 {
   "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
-	"dotfiles.targetPath": "~/dotfiles",
+  "dotfiles.targetPath": "~/dotfiles",
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "hidden",
   "workbench.layoutControl.enabled": false,
