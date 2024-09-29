@@ -8,7 +8,8 @@ sudo apt update -q --no-allow-insecure-repositories \
 curl \
 fontconfig \
 exa \
-stow
+stow \
+xdg-utils
 
 # install nerdfont fonts for fish shell theme
 font_list=("Meslo")
