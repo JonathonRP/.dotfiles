@@ -20,80 +20,80 @@
   "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
   "terminal.integrated.profiles.linux": {
 	"bash": {
-		"path": "bash",
-		"icon": "terminal-bash"
+	  "path": "bash",
+	  "icon": "terminal-bash"
 	},
 	"zsh": {
-		"path": "zsh"
+	  "path": "zsh"
 	},
 	"fish": {
-		"path": "fish",
-		"icon": "terminal-linux"
+	  "path": "fish",
+	  "icon": "terminal-linux"
 	},
 	"tmux": {
-		"path": "tmux",
-		"icon": "terminal-tmux"
+	  "path": "tmux",
+	  "icon": "terminal-tmux"
 	},
 	"pwsh": {
-		"path": "pwsh",
-		"icon": "terminal-powershell"
+	  "path": "pwsh",
+	  "icon": "terminal-powershell"
 	}
   },
   "terminal.integrated.env.linux": {},
   "workbench.colorTheme": "Nord Wave",
   "workbench.colorCustomizations": {
-    "sideBar.border": "#00000000",
-    "editorGroupHeader.border": "#00000000",
-    "panel.border": "#00000000",
-    "panelSectionHeader.border": "#00000000",
-    "editorOverviewRuler.border": "#00000000",
-    "editorGroupHeader.tabsBorder": "#00000000",
-    "editorGroup.dropBackground": "#00000000",
-    "sideBarSectionHeader.background": "#00000000",
-    "panelStickyScroll.background": "#00000000",
-    "editorStickyScroll.shadow": "#010b1400",
-    "panelStickyScroll.shadow": "#010b1400",
-    "editorGroup.border": "#00000000",
-    "editorGroupHeader.noTabsBackground": "#00000000",
-    "editorGroupHeader.tabsBackground": "#00173300",
-    "panelSection.dropBackground": "#00000000",
-    "scrollbar.shadow": "#00000000",
-    "[Night Owl]": {
-      "activityBar.background": "#000C1D",
-      "activityBar.border": "#102a44",
-      "sideBar.border": "#102a4400",
-      "editorGroupHeader.border": "#00000000",
-      "sideBar.foreground": "#8BADC1",
-      "panel.border": "#5f7e9700",
-      "panelSectionHeader.border": "#122d4200",
-      "editorOverviewRuler.border": "#00000000",
-      "editorGroupHeader.tabsBorder": "#262a3900",
-      "editor.background": "#01162700",
-      "sideBar.background": "#011627",
-      "editorGroup.dropBackground": "#00000000",
-      "activityBarBadge.background": "#44596b00",
-      "sideBarSectionHeader.background": "#01162700",
-      "panelStickyScroll.background": "#01162700",
-      "editorStickyScroll.background": "#011627",
-    },
-    "[Night Owl (No Italics)]":  {
-      "activityBar.background": "#000C1D",
-      "activityBar.border": "#102a44",
-      "editorGroup.border": "#102a44",
-      "sideBar.background": "#001122",
-      "sideBar.border": "#102a44",
-      "sideBar.foreground": "#8BADC1"
-    }
+	"sideBar.border": "#00000000",
+	"editorGroupHeader.border": "#00000000",
+	"panel.border": "#00000000",
+	"panelSectionHeader.border": "#00000000",
+	"editorOverviewRuler.border": "#00000000",
+	"editorGroupHeader.tabsBorder": "#00000000",
+	"editorGroup.dropBackground": "#00000000",
+	"sideBarSectionHeader.background": "#00000000",
+	"panelStickyScroll.background": "#00000000",
+	"editorStickyScroll.shadow": "#010b1400",
+	"panelStickyScroll.shadow": "#010b1400",
+	"editorGroup.border": "#00000000",
+	"editorGroupHeader.noTabsBackground": "#00000000",
+	"editorGroupHeader.tabsBackground": "#00173300",
+	"panelSection.dropBackground": "#00000000",
+	"scrollbar.shadow": "#00000000",
+	"[Night Owl]": {
+		"activityBar.background": "#000C1D",
+		"activityBar.border": "#102a44",
+		"sideBar.border": "#102a4400",
+		"editorGroupHeader.border": "#00000000",
+		"sideBar.foreground": "#8BADC1",
+		"panel.border": "#5f7e9700",
+		"panelSectionHeader.border": "#122d4200",
+		"editorOverviewRuler.border": "#00000000",
+		"editorGroupHeader.tabsBorder": "#262a3900",
+		"editor.background": "#01162700",
+		"sideBar.background": "#011627",
+		"editorGroup.dropBackground": "#00000000",
+		"activityBarBadge.background": "#44596b00",
+		"sideBarSectionHeader.background": "#01162700",
+		"panelStickyScroll.background": "#01162700",
+		"editorStickyScroll.background": "#011627",
+	},
+	"[Night Owl (No Italics)]":  {
+		"activityBar.background": "#000C1D",
+		"activityBar.border": "#102a44",
+		"editorGroup.border": "#102a44",
+		"sideBar.background": "#001122",
+		"sideBar.border": "#102a44",
+		"sideBar.foreground": "#8BADC1"
+	}
   },
   "apc.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.monospace.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.electron": {
-    "backgroundMaterial": "acrylic",
-    "backgroundColor": "#00000000",
-    "transparent": true,
-    "vibrancy": "ultra-dark",
-    "opacity": 0.85,
-    "visualEffectState": "active"
+	"backgroundMaterial": "acrylic",
+	"backgroundColor": "#00000000",
+	"transparent": true,
+	"vibrancy": "ultra-dark",
+	"opacity": 0.85,
+	"visualEffectState": "active"
   },
   "apc.stylesheet": {
     ".slider": {
