@@ -1,122 +1,22 @@
 {
-  "vim.easymotion": true,
-  "vim.useSystemClipboard": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>"],
-      "commands": ["vspacecode.space"]
-    },
-    {
-      "before": [","],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
-    }
-  ],
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": ["<space>"],
-      "commands": ["vspacecode.space"]
-    },
-    {
-      "before": [","],
-      "commands": [
-        "vspacecode.space",
-        {
-          "command": "whichkey.triggerKey",
-          "args": "m"
-        }
-      ]
-    }
-  ],
-  "workbench.iconTheme": "vscode-icons",
-  "zenMode.showTabs":"single",
-  "zenMode.fullScreen": false,
-  "git.autofetch": true,
-  "vim.vimrc.enable": true,
-  "console-ninja.captureFunctions": true,
-  "todo-tree.highlights.enabled": false,
+  "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
+	"dotfiles.targetPath": "~/dotfiles",
   "workbench.sideBar.location": "right",
-  "terminal.integrated.env.linux": {},
-  "colorInfo.languages": [
-    {
-      "selector": "css",
-      "colors": "css"
-    },
-    {
-      "selector": "sass",
-      "colors": "css"
-    },
-    {
-      "selector": "scss",
-      "colors": "css"
-    },
-    {
-      "selector": "less",
-      "colors": "css"
-    }
-  ],
+  "workbench.activityBar.location": "hidden",
+  "workbench.layoutControl.enabled": false,
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.iconTheme": "vscode-icons",
+  "vsicons.presets.hideExplorerArrows": true,
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontLigatures": "'calt', 'ss01'",
   "editor.minimap.autohide": true,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.scale": 3,
-  "mermaid.vscode.minimap": false,
-  "color-highlight.matchRgbWithNoFunction": true,
-  "color-highlight.markerType": "dot-before",
-  "color-highlight.languages": ["*"],
-  "colorize.hide_current_line_decorations": false,
-  "colorize.enable_search_variables": false,
   "editor.defaultColorDecorators": true,
-  "dev.containers.workspaceMountConsistency": "consistent",
-  "dev.containers.mountWaylandSocket": false,
-  "console-ninja.featureSet": "Community",
-  "gitlens.gitCommands.skipConfirmations": ["fetch:command", "switch:command"],
   "explorer.compactFolders": false,
-  "vitest.commandLine": "pnpm test",
-  "vitest.enable": true,
-  "svelte.enable-ts-plugin": true,
-  "color-highlight.matchHslWithNoFunction": true,
-  "color-highlight.matchWords": true,
-  "color-highlight.useARGB": true,
-  "supermaven.enable": {
-    "*": true
-  },
-  "prisma.showPrismaDataPlatformNotification": false,
-  "astro.content-intellisense": true,
-  "git.ignoreRebaseWarning": true,
-  "totalTypeScript.hideAllTips": false,
-  "totalTypeScript.hideBasicTips": true,
-  "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
-  "dotfiles.targetPath": "~/dotfiles",
-  "editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
-  "terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
-  "terminal.integrated.profiles.linux": {
-	"bash": {
-		"path": "bash",
-		"icon": "terminal-bash"
-	},
-	"zsh": {
-		"path": "zsh"
-	},
-	"fish": {
-		"path": "fish",
-		"icon": "terminal-linux"
-	},
-	"tmux": {
-		"path": "tmux",
-		"icon": "terminal-tmux"
-	},
-	"pwsh": {
-		"path": "pwsh",
-		"icon": "terminal-powershell"
-	}
-  },
-  "editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
+  "zenMode.showTabs":"single",
+  "zenMode.fullScreen": false,
+	"editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
 	"terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
 	"terminal.integrated.profiles.linux": {
 		"bash": {
@@ -138,6 +38,52 @@
 			"path": "pwsh",
 			"icon": "terminal-powershell"
 		}
+  },
+  "terminal.integrated.env.linux": {},
+  "workbench.colorTheme": "Nord Wave",
+  "workbench.colorCustomizations": {
+    "sideBar.border": "#00000000",
+    "editorGroupHeader.border": "#00000000",
+    "panel.border": "#00000000",
+    "panelSectionHeader.border": "#00000000",
+    "editorOverviewRuler.border": "#00000000",
+    "editorGroupHeader.tabsBorder": "#00000000",
+    "editorGroup.dropBackground": "#00000000",
+    "sideBarSectionHeader.background": "#00000000",
+    "panelStickyScroll.background": "#00000000",
+    "editorStickyScroll.shadow": "#010b1400",
+    "panelStickyScroll.shadow": "#010b1400",
+    "editorGroup.border": "#00000000",
+    "editorGroupHeader.noTabsBackground": "#00000000",
+    "editorGroupHeader.tabsBackground": "#00173300",
+    "panelSection.dropBackground": "#00000000",
+    "scrollbar.shadow": "#00000000",
+    "[Night Owl]": {
+      "activityBar.background": "#000C1D",
+      "activityBar.border": "#102a44",
+      "sideBar.border": "#102a4400",
+      "editorGroupHeader.border": "#00000000",
+      "sideBar.foreground": "#8BADC1",
+      "panel.border": "#5f7e9700",
+      "panelSectionHeader.border": "#122d4200",
+      "editorOverviewRuler.border": "#00000000",
+      "editorGroupHeader.tabsBorder": "#262a3900",
+      "editor.background": "#01162700",
+      "sideBar.background": "#011627",
+      "editorGroup.dropBackground": "#00000000",
+      "activityBarBadge.background": "#44596b00",
+      "sideBarSectionHeader.background": "#01162700",
+      "panelStickyScroll.background": "#01162700",
+      "editorStickyScroll.background": "#011627",
+    },
+    "[Night Owl (No Italics)]":  {
+      "activityBar.background": "#000C1D",
+      "activityBar.border": "#102a44",
+      "editorGroup.border": "#102a44",
+      "sideBar.background": "#001122",
+      "sideBar.border": "#102a44",
+      "sideBar.foreground": "#8BADC1"
+    }
   },
   "apc.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
   "apc.monospace.font.family": "'Geist Mono', 'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
@@ -203,50 +149,88 @@
       "display": "none !important"
     }
   },
-  "workbench.colorTheme": "Tomorrow Night Blue",
-  "workbench.colorCustomizations": {
-    "sideBar.border": "#00000000",
-    "editorGroupHeader.border": "#00000000",
-    "panel.border": "#00000000",
-    "panelSectionHeader.border": "#00000000",
-    "editorOverviewRuler.border": "#00000000",
-    "editorGroupHeader.tabsBorder": "#00000000",
-    "editorGroup.dropBackground": "#00000000",
-    "sideBarSectionHeader.background": "#00000000",
-    "panelStickyScroll.background": "#00000000",
-    "editorStickyScroll.shadow": "#010b1400",
-    "panelStickyScroll.shadow": "#010b1400",
-    "editorGroup.border": "#00000000",
-    "editorGroupHeader.noTabsBackground": "#00000000",
-    "editorGroupHeader.tabsBackground": "#00173300",
-    "panelSection.dropBackground": "#00000000",
-    "scrollbar.shadow": "#00000000",
-    "[Night Owl]": {
-      "activityBar.background": "#000C1D",
-      "activityBar.border": "#102a44",
-      "sideBar.border": "#102a4400",
-      "editorGroupHeader.border": "#00000000",
-      "sideBar.foreground": "#8BADC1",
-      "panel.border": "#5f7e9700",
-      "panelSectionHeader.border": "#122d4200",
-      "editorOverviewRuler.border": "#00000000",
-      "editorGroupHeader.tabsBorder": "#262a3900",
-      "editor.background": "#01162700",
-      "sideBar.background": "#011627",
-      "editorGroup.dropBackground": "#00000000",
-      "activityBarBadge.background": "#44596b00",
-      "sideBarSectionHeader.background": "#01162700",
-      "panelStickyScroll.background": "#01162700",
-      "editorStickyScroll.background": "#011627",
+  "git.autofetch": true,
+  "git.ignoreRebaseWarning": true,
+  "gitlens.gitCommands.skipConfirmations": ["fetch:command", "switch:command"],
+  "vim.vimrc.enable": true,
+  
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": true,
+  "svelte.enable-ts-plugin": true,
+
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
     },
-    "[Night Owl (No Italics)]":  {
-      "activityBar.background": "#000C1D",
-      "activityBar.border": "#102a44",
-      "editorGroup.border": "#102a44",
-      "sideBar.background": "#001122",
-      "sideBar.border": "#102a44",
-      "sideBar.foreground": "#8BADC1"
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
     }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
+    },
+    {
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "console-ninja.captureFunctions": true,
+  "todo-tree.highlights.enabled": false,
+  "colorInfo.languages": [
+    {
+      "selector": "css",
+      "colors": "css"
+    },
+    {
+      "selector": "sass",
+      "colors": "css"
+    },
+    {
+      "selector": "scss",
+      "colors": "css"
+    },
+    {
+      "selector": "less",
+      "colors": "css"
+    }
+  ],
+  
+  "mermaid.vscode.minimap": false,
+  "color-highlight.matchRgbWithNoFunction": true,
+  "color-highlight.markerType": "dot-before",
+  "color-highlight.languages": ["*"],
+  "colorize.hide_current_line_decorations": false,
+  "colorize.enable_search_variables": false,
+  
+  "dev.containers.workspaceMountConsistency": "consistent",
+  "dev.containers.mountWaylandSocket": false,
+  "console-ninja.featureSet": "Community",
+  "vitest.commandLine": "pnpm test",
+  "vitest.enable": true,
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.matchWords": true,
+  "color-highlight.useARGB": true,
+  "supermaven.enable": {
+    "*": true
   },
-  "glassit.alpha": 245,
+  "prisma.showPrismaDataPlatformNotification": false,
+  "astro.content-intellisense": true
 }
