@@ -320,8 +320,8 @@
     },
     {
         "key": "ctrl+f",
-        "command": "-vscode-vim.ctrl-f",
-        "when": "editorTextFocus && vim.ctrlKeysNormal && vim.init && vim.mode != 'insert'"
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl && vim.mode != 'Insert'"
     },
     {
         "key": "space",
