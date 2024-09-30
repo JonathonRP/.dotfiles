@@ -82,10 +82,10 @@ noremap! jk <C-C>
 vnoremap kj <C-C>
 vnoremap jk <C-C>
 
-noremap j j
-noremap k k
-noremap l h
-noremap ; l
+" noremap j j
+" noremap k k
+" noremap l h
+" noremap ; l
 
 nnoremap <Leader>ve :e $MYVIMRC<CR>
 nnoremap <Leader>vr :source $MYVIMRC<CR>
