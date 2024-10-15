@@ -45,19 +45,19 @@ tar xf lazygit.tar.gz lazygit
 
 echo "installing lazygit-cli"
 sudo install lazygit /usr/local/bin
-cd ../
-
-# stow from .dotfiles
-stow vim lazygit gitcz fish --adopt
 
 # clean up lazygit
+cd ../
 rm -rf lazygit-cli
 
 # ---fish setup---
-# install fish shell
-# sudo apt-add-repository ppa:fish-shell/release-3
-# sudo apt update
-# sudo apt install fish
+if command -v fish >/dev/null 2>&1; then
+else
+    # install fish shell
+    sudo apt-add-repository ppa:fish-shell/release-3
+    sudo apt update
+    sudo apt install fish
+fi
 
 # set default shell to fish
 # command -v fish | sudo tree -a /ect/shells
@@ -79,21 +79,49 @@ rm -rf lazygit-cli
 # vim -c ":PlugInstall"
 
 # dev setup
-# install nodejs
-# curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+package_manager=""
 
-# sudo nvm install --lts
-
-# sudo nvm install node
-
-# sudo nvm use node
-
-# install npm dev tools
-# sudo npm install -g typescript sass gulp
-
-if command -v npm 2>&1 >/dev/null
-then
-    npm install -g git-cz
+# Check for npm
+if command -v npm &> /dev/null; then
+  package_manager="npm"
+# Check for bun
+elif command -v bun &> /dev/null; then
+  package_manager="bun"
+# Check for deno
+elif command -v deno &> /dev/null; then
+  package_manager="deno"
 fi
 
+case "$package_manager" in
+  "npm")
+    # install npm dev tools
+    # sudo npm install -g typescript sass gulp
+    npm install -g git-cz
+    ;;
+  "bun")
+    bun install -g git-cz
+    ;;
+  "deno")
+    deno install -g npm:git-cz
+    ;;
+  *)
+    echo "No package manager found"
+    # install nodejs
+    # curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    
+    # sudo nvm install --lts
+    
+    # sudo nvm install node
+    
+    # sudo nvm use node
+
+    # install npm dev tools
+    # sudo npm install -g typescript sass gulp
+    ;;
+esac
+
+# simlink config files from .dotfiles using stow
+stow vim lazygit gitcz fish --adopt
+
+# undo stashing overwrite
 git restore .
