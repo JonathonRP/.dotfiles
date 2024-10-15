@@ -20,6 +20,7 @@
   "zenMode.fullScreen": false,
 	"editor.fontFamily": "'JetBrains Mono', 'cascadia code', Consolas, 'Courier New', monospace",
 	"terminal.integrated.fontFamily": "'MesloLGM Nerd Font'",
+	"terminal.integrated.defaultProfile.linux": "fish",
 	"terminal.integrated.profiles.linux": {
 		"bash": {
 			"path": "bash",
