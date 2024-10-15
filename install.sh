@@ -81,13 +81,13 @@ fi
 package_manager=""
 
 # Check for npm
-if command -v npm &> /dev/null; then
+if command -v npm 2>&1 >/dev/null; then
   package_manager="npm"
 # Check for bun
-elif command -v bun &> /dev/null; then
+elif command -v bun 2>&1 >/dev/null; then
   package_manager="bun"
 # Check for deno
-elif command -v deno &> /dev/null; then
+elif command -v deno 2>&1 >/dev/null; then
   package_manager="deno"
   else
     echo "No supported package manager found (npm, bun, or deno)"
