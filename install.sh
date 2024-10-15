@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# assumed to be ubuntu linux
 DEBIAN_FRONTEND=noninteractive
 
 # install deps
@@ -90,33 +90,29 @@ elif command -v bun &> /dev/null; then
 # Check for deno
 elif command -v deno &> /dev/null; then
   package_manager="deno"
+  else
+    echo "No supported package manager found (npm, bun, or deno)"
+    
+    # install nodejs
+    curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    
+    sudo nvm install --lts
+    
+    sudo nvm install node
+    
+    sudo nvm use node
+
+    package_manager="npm"
 fi
 
 case "$package_manager" in
-  "npm")
-    # install npm dev tools
-    # sudo npm install -g typescript sass gulp
-    npm install -g git-cz
-    ;;
-  "bun")
-    bun install -g git-cz
-    ;;
   "deno")
     deno install -g npm:git-cz
     ;;
-  *)
-    echo "No package manager found"
-    # install nodejs
-    # curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-    
-    # sudo nvm install --lts
-    
-    # sudo nvm install node
-    
-    # sudo nvm use node
-
+  "npm" | "bun")
     # install npm dev tools
     # sudo npm install -g typescript sass gulp
+    "$package_manager" install -g git-cz
     ;;
 esac
 
