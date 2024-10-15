@@ -1,13 +1,4 @@
-ch#!/bin/bash
-
-# location of the *full repo* (defaults to ~/.dotfiles)
-DOTFILES_PATH="${DOTFILES_PATH:="$HOME/.dotfiles"}"
-
-# if this is a codespace, link automatically cloned dotfiles repo to the expected DOTFILES_PATH
-# https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-personalization-for-codespaces#troubleshooting-dotfiles
-if [[ "$CODESPACES" = "true" ]] && [[ -d /workspaces/.codespaces/.persistedshare/dotfiles ]]; then
-  ln -sf /workspaces/.codespaces/.persistedshare/dotfiles "$DOTFILES_PATH"
-fi
+#!/bin/bash
 
 . /etc/os-release
 
