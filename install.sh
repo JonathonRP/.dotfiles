@@ -1,4 +1,4 @@
-#!/bin/bash
+ch#!/bin/bash
 
 # location of the *full repo* (defaults to ~/.dotfiles)
 DOTFILES_PATH="${DOTFILES_PATH:="$HOME/.dotfiles"}"
@@ -62,13 +62,16 @@ case $ID in
     # clean up lazygit
     cd ../
     rm -rf lazygit-cli
+    echo "done - lazygit-cli installed"
     
     # ---fish setup---
     if ! command -v fish 2>&1 >/dev/null; then
         # install fish shell
+        echo "installing fish"
         sudo apt-add-repository ppa:fish-shell/release-3
         sudo apt update
         sudo apt install fish
+        echo "done - fish installed"
     fi
     
     # set default shell to fish
@@ -91,6 +94,7 @@ case $ID in
     # vim -c ":PlugInstall"
     
     # dev setup
+    echo "installing git-cz"
     package_manager=""
     
     # Check for npm
@@ -103,7 +107,7 @@ case $ID in
     elif command -v deno 2>&1 >/dev/null; then
       package_manager="deno"
       else
-        echo "No supported package manager found (npm, bun, or deno)"
+        echo "No supported package manager found (npm, bun, or deno). installing node/npm"
         
         # install nodejs
         curl -0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
@@ -128,11 +132,16 @@ case $ID in
         ;;
     esac
 
+    echo "done - git-cz installed"
+
+    echo "installing .dotfiles"
     # simlink config files from .dotfiles using stow
     stow vim lazygit gitcz fish --adopt --verbose
     
     # undo stashing overwrite
     git restore .
+
+    echo "done - .dotfiles installed"
   ;;
   
   *) echo "This is an unknown distribution."
