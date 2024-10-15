@@ -193,8 +193,6 @@
   "dev.containers.workspaceMountConsistency": "consistent",
   "dev.containers.mountWaylandSocket": false,
   "console-ninja.featureSet": "Community",
-  "vitest.commandLine": "pnpm test",
-  "vitest.enable": true,
   "color-highlight.matchHslWithNoFunction": true,
   "color-highlight.matchWords": true,
   "color-highlight.useARGB": true,
