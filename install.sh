@@ -11,6 +11,13 @@ exa \
 stow \
 xdg-utils
 
+
+# simlink config files from .dotfiles using stow
+stow vim lazygit gitcz fish --adopt
+
+# undo stashing overwrite
+git restore .
+
 # install nerdfont fonts for fish shell theme
 font_list=("Meslo")
 for font_name in $font_list
@@ -114,9 +121,3 @@ case "$package_manager" in
     "$package_manager" install -g git-cz
     ;;
 esac
-
-# simlink config files from .dotfiles using stow
-stow vim lazygit gitcz fish --adopt
-
-# undo stashing overwrite
-git restore .
