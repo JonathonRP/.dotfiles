@@ -51,7 +51,7 @@ cd ../
 rm -rf lazygit-cli
 
 # ---fish setup---
-if ! command -v fish >/dev/null 2>&1; then
+if ! command -v fish 2>&1 >/dev/null; then
     # install fish shell
     sudo apt-add-repository ppa:fish-shell/release-3
     sudo apt update
