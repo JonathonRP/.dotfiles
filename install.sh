@@ -127,8 +127,6 @@ case $ID in
 
     echo "installing .dotfiles"
 
-    DOTFILES_PATH="${DOTFILES_PATH:="$HOME"}"
-
     # if this is a codespace, link automatically cloned dotfiles repo to the expected DOTFILES_PATH
     # https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-personalization-for-codespaces#troubleshooting-dotfiles
     # simlink config files from .dotfiles using stow
