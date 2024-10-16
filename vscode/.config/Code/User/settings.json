@@ -1,6 +1,4 @@
 {
-  "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
-	"dotfiles.targetPath": "~/dotfiles",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
   "workbench.sideBar.location": "right",
@@ -95,7 +93,7 @@
     "backgroundColor": "#00000000",
     "transparent": true,
     "vibrancy": "ultra-dark",
-    "opacity": 0.85,
+    "opacity": 0.98,
     "visualEffectState": "active"
   },
   "apc.stylesheet": {
@@ -159,46 +157,54 @@
   
   "vim.easymotion": true,
   "vim.useSystemClipboard": true,
-  "totalTypeScript.hideAllTips": false,
-  "totalTypeScript.hideBasicTips": true,
-  "svelte.enable-ts-plugin": true,
-  "console-ninja.captureFunctions": true,
-  "todo-tree.highlights.enabled": false,
-  "colorInfo.languages": [
+
+  // Trigger the main which key menu with in the active editor with vim
+  // This cannot be put into keybindings.json because it will
+  // create conflict with Vim.
+  // https://github.com/stevenguh/spacecode/issues/3
+  "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "selector": "css",
-      "colors": "css"
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
     },
     {
-      "selector": "sass",
-      "colors": "css"
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["vspacecode.space"]
     },
     {
-      "selector": "scss",
-      "colors": "css"
+      "before": [","],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
     },
     {
-      "selector": "less",
-      "colors": "css"
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
+    },
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     }
   ],
   
-  "mermaid.vscode.minimap": false,
-  "color-highlight.matchRgbWithNoFunction": true,
-  "color-highlight.markerType": "dot-before",
-  "color-highlight.languages": ["*"],
-  "colorize.hide_current_line_decorations": false,
-  "colorize.enable_search_variables": false,
-  
   "dev.containers.workspaceMountConsistency": "consistent",
   "dev.containers.mountWaylandSocket": false,
-  "console-ninja.featureSet": "Community",
-  "color-highlight.matchHslWithNoFunction": true,
-  "color-highlight.matchWords": true,
-  "color-highlight.useARGB": true,
-  "supermaven.enable": {
-    "*": true
-  },
-  "prisma.showPrismaDataPlatformNotification": false,
-  "astro.content-intellisense": true
+  "csharp.experimental.debug.hotReload": true,
+  "dotnet.workingWithTestSignedSdk": true,
 }
