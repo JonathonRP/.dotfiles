@@ -126,12 +126,19 @@ case $ID in
     echo "done - git-cz installed"
 
     echo "installing .dotfiles"
-    
-    # debug simlink config files from .dotfiles using stow
-    stow vim lazygit gitcz fish --adopt -nvv
 
+    DOTFILES_PATH="${DOTFILES_PATH:="$HOME"}"
+
+    # if this is a codespace, link automatically cloned dotfiles repo to the expected DOTFILES_PATH
+    # https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-personalization-for-codespaces#troubleshooting-dotfiles
     # simlink config files from .dotfiles using stow
-    stow vim lazygit gitcz fish --adopt -vv
+    if [[ "$CODESPACES" = "true" ]] && [[ -d /workspaces/.codespaces/.persistedshare/dotfiles ]]; then
+      # location of the *full repo* (defaults to ~/.dotfiles)
+      stow vim lazygit gitcz fish --adopt -vv -t $HOME
+    else
+      stow vim lazygit gitcz fish --adopt -vv
+    fi
+
     
     # undo stashing overwrite
     git restore .
