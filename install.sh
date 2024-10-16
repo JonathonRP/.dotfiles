@@ -138,8 +138,9 @@ case $ID in
     # git --reset hard
 
     echo "done - .dotfiles installed"
-  ;;
+    ;;
   
-  *) echo "This is an unknown distribution."
+  *)
+    echo "This is an unknown distribution."
     ;;
 esac
