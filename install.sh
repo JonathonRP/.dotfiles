@@ -126,11 +126,16 @@ case $ID in
     echo "done - git-cz installed"
 
     echo "installing .dotfiles"
+    
+    # debug simlink config files from .dotfiles using stow
+    stow vim lazygit gitcz fish --adopt -nvv
+
     # simlink config files from .dotfiles using stow
-    stow vim lazygit gitcz fish --adopt --verbose
+    stow vim lazygit gitcz fish --adopt -vv
     
     # undo stashing overwrite
     git restore .
+    # git --reset hard
 
     echo "done - .dotfiles installed"
   ;;
