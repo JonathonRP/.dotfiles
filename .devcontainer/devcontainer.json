@@ -3,48 +3,17 @@
     "image": "mcr.microsoft.com/devcontainers/base:jammy",
     "features": {
         "ghcr.io/meaningful-ooo/devcontainer-features/fish:1": {
-			"fisher": false
-		}
+		"fisher": false
+	}
     },
 
     "customizations": {
-		"vscode": {
-            "extensions": [
-                "mads-hartmann.bash-ide-vscode",
-                "bmalehorn.vscode-fish"
-            ],
-			"settings": {
-                "editor.fontLigatures": "'calt', 'ss01'",
-
-                "dotfiles.repository": "https://github.com/JonathonRP/.dotfiles",
-				"dotfiles.targetPath": "~/dotfiles",
-
-				"editor.fontFamily": "'cascadia code', Consolas, 'Courier New', monospace",
-				"terminal.integrated.fontFamily": "'MesloLGM NF'",
-				"terminal.integrated.defaultProfile.linux": "fish",
-				"terminal.integrated.profiles.linux": {
-					"bash": {
-						"path": "bash",
-						"icon": "terminal-bash"
-					},
-					"zsh": {
-						"path": "zsh"
-					},
-					"fish": {
-						"path": "fish",
-						"icon": "terminal-linux"
-					},
-					"tmux": {
-						"path": "tmux",
-						"icon": "terminal-tmux"
-					},
-					"pwsh": {
-						"path": "pwsh",
-						"icon": "terminal-powershell"
-					}
-				}
-            }
-        }
+	"vscode": {
+	    "extensions": [
+		"mads-hartmann.bash-ide-vscode",
+		"bmalehorn.vscode-fish"
+	    ]
+	}
     },
     
     "remoteUser": "root"
