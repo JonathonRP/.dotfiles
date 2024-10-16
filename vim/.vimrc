@@ -45,7 +45,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
-let g:python3_host_prog = 'C:\Users\Reese.Perry\AppData\Local\Programs\Python\Python39-32\python.exe'
+" let g:python3_host_prog = 'C:\Users\Reese.Perry\AppData\Local\Programs\Python\Python39-32\python.exe'
 
 let g:ale_linters = {
       \ 'cs': ['OmniSharp']
