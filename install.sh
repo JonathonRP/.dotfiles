@@ -69,15 +69,6 @@ case $ID in
     # command -v fish | sudo tree -a /ect/shells
     # sudo chsh -s $(which fish) $USER
     
-    # install fisher fish minimal package manager
-    if ! fish -c "command -q fisher"; then
-      if [ "${USERNAME}" != "root" ]; then
-        su $USERNAME -c "fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'"
-      else
-        fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
-      fi
-    fi
-    
     # dev setup
     echo "installing git-cz"
     package_manager=""
@@ -139,7 +130,17 @@ case $ID in
 
     # ---fish config is now available---
     # fish -c "source ~/.config/fish/config.fish"
-    fish -c "fisher update"
+    # install fisher fish minimal package manager
+    if ! fish -c "command -q fisher"; then
+      echo "installing fisher"
+      if [ "${USERNAME}" != "root" ]; then
+        su $USERNAME -c "fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'"
+      else
+        fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
+      fi
+      echo "done - fisher installed"
+    fi
+    # fish -c "fisher update"
     # fish -c 'tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes'
     fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
     # fish -c "fundle install"
