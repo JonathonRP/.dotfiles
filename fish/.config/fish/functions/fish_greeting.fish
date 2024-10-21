@@ -1,12 +1,12 @@
 function fish_greeting
-  set_color green
-  echo Wake up, Neo...
-  echo The Matrix has you...
-  echo Follow the white rabit.
-  echo
-  echo
-  echo Knock, knock, Neo.
+  set greeting ("Wake up, Neo...\\r" \
+    "The Matrix has you...\\r" \
+    "Follow the white rabit.\\r" \
+    "\\r\\r" \
+    "Knock, knock, Neo.\\r" | string collect)
+  (set_color green)
+  for char in (string split -- '' $greeting); echo -ne $char; end
 
-  set_color normal
+  (set_color normal)
   echo
 end
