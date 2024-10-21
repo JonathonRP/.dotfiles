@@ -70,11 +70,13 @@ case $ID in
     # sudo chsh -s $(which fish) $USER
     
     # install fisher fish minimal package manager
-    # fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'
-    
-    # if [ "${USERNAME}" != "root" ]; then
-    #   su $USERNAME -c 'fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"'
-    # fi
+    if ! fish -c "command -q fisher" then
+      if [ "${USERNAME}" != "root" ]; then
+        su $USERNAME -c "fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'"
+      else
+        fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"
+      fi
+    fi
     
     # dev setup
     echo "installing git-cz"
