@@ -4,9 +4,9 @@ function fish_greeting
     "Follow the white rabit.\\r" \
     "\\r\\r" \
     "Knock, knock, Neo.\\r" | string collect)
-  (set_color green)
+  set_color green
   for char in (string split -- '' $greeting); echo -ne $char; end
 
-  (set_color normal)
+  set_color normal
   echo
 end
