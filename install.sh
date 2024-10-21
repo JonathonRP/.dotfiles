@@ -70,7 +70,7 @@ case $ID in
     # sudo chsh -s $(which fish) $USER
     
     # install fisher fish minimal package manager
-    if ! fish -c "command -q fisher" then
+    if ! fish -c "command -q fisher"; then
       if [ "${USERNAME}" != "root" ]; then
         su $USERNAME -c "fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update'"
       else
