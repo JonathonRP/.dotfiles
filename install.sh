@@ -132,7 +132,6 @@ case $ID in
     # fish -c "source ~/.config/fish/config.fish"
 
     echo "installing fundle"
-
     fish -c "fundle install"
 
     # install fisher fish minimal package manager
@@ -146,13 +145,14 @@ case $ID in
       echo "done - fisher installed"
     fi
 
-    echo "and update plugins"
-
-    fish -c "fundle update && fisher update" <<< "no"
+    echo "updating fisher plugins"
+    echo "no config, keep inital. running true config after" | fish -c "fisher update"
 
     echo "config tide"
-
     fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
+
+    echo "updating fundle plugins"
+    fish -c "fundle update"
 
     # ---vim setup---
     # apt-get install vim
