@@ -131,6 +131,10 @@ case $ID in
     # ---fish config is now available---
     # fish -c "source ~/.config/fish/config.fish"
 
+    echo "installing fundle"
+
+    fish -c "fundle install"
+
     # install fisher fish minimal package manager
     if ! fish -c "type -q fisher"; then
       echo "installing fisher"
@@ -142,9 +146,8 @@ case $ID in
       echo "done - fisher installed"
     fi
 
-    echo "init fundle and update plugins"
+    echo "and update plugins"
 
-    fish -c "fundle install"
     fish -c "fundle update && fisher update"
 
     echo "config tide"
