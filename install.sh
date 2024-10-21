@@ -133,11 +133,11 @@ case $ID in
     # install fisher fish minimal package manager
     if ! fish -c "command -q fisher"; then
       echo "installing fisher"
+      fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
       if [ "${USERNAME}" != "root" ]; then
-        su $USERNAME -c "fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'"
-      else
-        fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+        su $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
       fi
+      fish -c "fisher -v"
       echo "done - fisher installed"
     fi
     fish -c "fisher update"
