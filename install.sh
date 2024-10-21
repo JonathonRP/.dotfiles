@@ -148,7 +148,7 @@ case $ID in
 
     echo "and update plugins"
 
-    fish -c "fundle update && fisher update"
+    fish -c "fundle update && fisher update" <<< echo "no"
 
     echo "config tide"
 
