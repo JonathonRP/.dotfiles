@@ -131,7 +131,7 @@ case $ID in
     # ---fish config is now available---
     # fish -c "source ~/.config/fish/config.fish"
     fish -c "fundle install"
-    fish -c "fundle update"
+    # fish -c "fundle update"
     # install fisher fish minimal package manager
     if ! fish -c "type -q fisher"; then
       echo "installing fisher"
