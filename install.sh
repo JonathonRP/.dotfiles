@@ -135,7 +135,7 @@ case $ID in
       echo "installing fisher"
       fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
       if [ "${USERNAME}" != "root" ]; then
-        su $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
+        sudo -u $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
       fi
       fish -c "fisher -v"
       echo "done - fisher installed"
