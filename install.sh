@@ -76,15 +76,6 @@ case $ID in
     #   su $USERNAME -c 'fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update"'
     # fi
     
-    # fish -c 'fundle install'
-    fish -c 'fisher update'
-    # fish -c 'tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes'
-    fish -C "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
-    
-    # ---vim setup---
-    # apt-get install vim
-    # vim -c ":PlugInstall"
-    
     # dev setup
     echo "installing git-cz"
     package_manager=""
@@ -137,13 +128,23 @@ case $ID in
     else
       stow vim lazygit gitcz fish --adopt -vv
     fi
-
     
     # undo stashing overwrite
     git restore .
     # git --reset hard
 
     echo "done - .dotfiles installed"
+
+    # ---fish config is now available---
+    # fish -c "source ~/.config/fish/config.fish"
+    fish -c "fisher update"
+    # fish -c 'tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes'
+    fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
+    # fish -c "fundle install"
+    
+    # ---vim setup---
+    # apt-get install vim
+    # vim -c ":PlugInstall"
     ;;
   
   *)
