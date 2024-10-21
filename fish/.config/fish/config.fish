@@ -38,8 +38,8 @@ end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    fundle install
-    fundle update
+    # fundle install
+    # fundle update
     # fisher update
     # tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes
 
