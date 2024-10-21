@@ -5,7 +5,7 @@ function fish_greeting
     \n\n \
     Knock, knock, Neo.\n\n \ \n
   set_color green
-  for char in (string split -- '' $message); echo -ne $char; end
+  for char in (string split '' $message); echo -ne $char; end
 
   set_color normal
 end
