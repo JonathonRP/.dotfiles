@@ -3,7 +3,7 @@ function fish_greeting
     The Matrix has you...\n \
     Follow the white rabit.\n \
     \n\n \
-    Knock, knock, Neo.\n\n
+    Knock, knock, Neo.\n\n \ \n
   set_color green
   for char in (string split -- '' $message); echo -ne $char; end
 
