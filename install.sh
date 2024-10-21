@@ -77,8 +77,9 @@ case $ID in
     # fi
     
     # fish -c 'fundle install'
-    # fish -c 'fisher update'
+    fish -c 'fisher update'
     # fish -c 'tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes'
+    fish -C 'tide configure --auto --style=Rainbow --prompt_colors=\'True color\' --show_time=\'24-hour format\' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style=\'Two lines, character\' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons=\'Few icons\' --transient=Yes'
     
     # ---vim setup---
     # apt-get install vim
