@@ -132,7 +132,7 @@ case $ID in
     # fish -c "source ~/.config/fish/config.fish"
     fish -c "fundle install"
     fish -c "fundle update"
-    install fisher fish minimal package manager
+    # install fisher fish minimal package manager
     if ! fish -c "type -q fisher"; then
       echo "installing fisher"
       fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
