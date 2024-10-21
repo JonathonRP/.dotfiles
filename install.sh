@@ -130,7 +130,9 @@ case $ID in
 
     # ---fish config is now available---
     # fish -c "source ~/.config/fish/config.fish"
-    # install fisher fish minimal package manager
+    fish -c "fundle install"
+    fish -c "fundle update"
+    install fisher fish minimal package manager
     if ! fish -c "type -q fisher"; then
       echo "installing fisher"
       fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
@@ -144,8 +146,6 @@ case $ID in
     # fish -c 'tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes'
     fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
     
-    fish -c "fundle install"
-    # fish -c "fundle update"
     # ---vim setup---
     # apt-get install vim
     # vim -c ":PlugInstall"
