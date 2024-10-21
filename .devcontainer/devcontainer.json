@@ -11,7 +11,9 @@
         "vscode": {
             "extensions": [
                 "mads-hartmann.bash-ide-vscode",
-                "bmalehorn.vscode-fish"
+                "lunaryorn.fish-ide",
+                "skyapps.fish-vscode",
+                "zgm.vscode-fish"
             ]
         }
     },
