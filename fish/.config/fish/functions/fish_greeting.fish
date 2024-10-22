@@ -9,7 +9,7 @@ function fish_greeting
     \n \
     \n
   set_color green
-  for char in (string split --allow-empty '' $message); printf '%b\n' $char; end
+  for char in (string split '' $message); printf '%b\n' $char; end
 
   set_color normal
 end
