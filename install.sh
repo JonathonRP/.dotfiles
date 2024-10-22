@@ -140,11 +140,11 @@ case $ID in
     echo "done - .dotfiles installed"
 
     # ---fish config is now available---
-    # echo "config fish"
-    # fish -c "source ~/.config/fish/config.fish"
+    echo "config fish"
+    fish -c "source ~/.config/fish/config.fish"
 
     echo "installing and configure tide"
-    fish -c "fisher update; tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes" 2> /dev/null
+    FISH_JOB_CONTROL=0 fish -c "fisher update; tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes" 2> /dev/null
 
     if [ $? -ne 0 ]; then
         echo "Error occurred during updating and configure tide."
