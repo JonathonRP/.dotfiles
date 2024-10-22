@@ -154,6 +154,8 @@ case $ID in
     echo "updating fundle plugins"
     fish -c "fundle update"
 
+    exit $?
+
     # ---vim setup---
     # apt-get install vim
     # vim -c ":PlugInstall"
