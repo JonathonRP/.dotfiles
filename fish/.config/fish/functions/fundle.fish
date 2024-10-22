@@ -151,7 +151,6 @@ function __fundle_checkout_revision -a plugin -a git_url
 	set -l sha (__fundle_commit_sha $git_dir (__fundle_url_rev $git_url))
 	if test $status -eq 0
 		command git --git-dir="$git_dir" --work-tree="$plugin_dir" checkout -q -f $sha
-		return 0
 	else
 		echo "Could not checkout $plugin revision $sha"
 		return 1
