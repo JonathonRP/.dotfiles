@@ -36,9 +36,8 @@ if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
 
-if status is-interactive
+# if status is-interactive
     # Commands to run in interactive sessions can go here
-    echo "reached interactive"
     # fisher update; tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes
     
     # set LAZYGIT_VERSION $(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -47,4 +46,4 @@ if status is-interactive
     #   sudo install lazygit /usr/local/bin
 
     # fundle update
-end
+# end
