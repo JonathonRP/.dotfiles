@@ -64,7 +64,18 @@ case $ID in
         sudo apt install fish
         echo "done - fish installed"
     fi
-    
+
+    # install fisher fish minimal package manager
+    if ! fish -c "type -q fisher"; then
+      echo "installing fisher"
+      fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
+      if [ "${USERNAME}" != "root" ]; then
+        sudo -u $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
+      fi
+      fish -c "fisher -v"
+      echo "done - fisher installed"
+    fi
+
     # set default shell to fish
     # command -v fish | sudo tree -a /ect/shells
     # sudo chsh -s $(which fish) $USER
@@ -134,22 +145,8 @@ case $ID in
     echo "installing fundle"
     fish -c "fundle install"
 
-    # install fisher fish minimal package manager
-    if ! fish -c "type -q fisher"; then
-      echo "installing fisher"
-      fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
-      if [ "${USERNAME}" != "root" ]; then
-        sudo -u $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
-      fi
-      fish -c "fisher -v"
-      echo "done - fisher installed"
-    fi
-
-    echo "updating fisher plugins"
-    fish -c "fisher update" && echo "no config, keep inital. running true config after"
-
-    echo "config tide"
-    fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
+    echo "updateing/installing tide and configure tide"
+    fish -c "fisher update" && fish -c "tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
 
     echo "updating fundle plugins"
     fish -c "fundle update"

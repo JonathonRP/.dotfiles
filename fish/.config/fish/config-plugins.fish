@@ -1,4 +1,4 @@
-if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); else; fundle self-update; end
+if not functions -q fundle; eval (curl -sfL https://git.io/fundle-install); else; eval (wget https://git.io/fundle -O ./fish/.config/fish/functions/fundle.fish); end
 
 # fundle plugin 'jorgebucaran/fisher'
 # fundle plugin 'tuvistavie/oh-my-fish-core'
