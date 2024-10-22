@@ -17,11 +17,6 @@ alias lla "ll -A"
 alias g git
 alias lg lazygit
 
-set PLUGINS_CONFIG (dirname (status --current-filename))/config-plugins.fish
-if test -f $PLUGINS_CONFIG
-  source $PLUGINS_CONFIG
-end
-
 switch (uname)
   case Darwin
     source (dirname (status --current-filename))/config-osx.fish
@@ -45,5 +40,4 @@ end
     #   tar xf lazygit.tar.gz lazygit
     #   sudo install lazygit /usr/local/bin
 
-    # fundle update
 # end
