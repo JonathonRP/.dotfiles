@@ -14,10 +14,62 @@ case $ID in
     exa \
     stow \
     xdg-utils
+    
+    # ---fish setup---
+    if ! command -v fish 2>&1 >/dev/null; then
+        echo "installing fish"
+        sudo apt-add-repository ppa:fish-shell/release-3
+        sudo apt update
+        sudo apt install -y --no-install-recommends fish
+        echo "done - fish installed"
+    fi
+
+    # install fisher fish minimal package manager
+    if ! fish -c "type -q fisher"; then
+      echo "installing fisher"
+      fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher </dev/null'
+      if [ "${USERNAME}" != "root" ]; then
+        sudo -u $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher </dev/null'
+      fi
+      fish -c "fisher -v"
+      echo "done - fisher installed"
+    fi
+
+    # set default shell to fish
+    # command -v fish | sudo tree -a /ect/shells
+    # sudo chsh -s $(which fish) $USER
 
     # ---vim setup---
+    # echo "install vim"
     # apt-get install vim
+
+    # ---dotfiles setup---
+    echo "setup .dotfiles"
+
+    # if this is a codespace, link automatically cloned dotfiles repo to the expected DOTFILES_PATH
+    # https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-personalization-for-codespaces#troubleshooting-dotfiles
+    # simlink config files from .dotfiles using stow
+    if [[ "$CODESPACES" = "true" ]] && [[ -d /workspaces/.codespaces/.persistedshare/dotfiles ]]; then
+      # location of the *full repo* (defaults to ~/.dotfiles)
+      stow vim lazygit gitcz fish --adopt -vv -t $HOME
+    else
+      stow vim lazygit gitcz fish --adopt -vv
+    fi
     
+    # undo stashing overwrite
+    git restore .
+    # git --reset hard
+
+    echo "done - .dotfiles installed"
+
+    # ---config fish---
+    # fish -c "source ~/.config/fish/config.fish" - fish config is available now
+    echo "installing/updating plugins and configure tide"
+    fish -c "fisher update </dev/null; tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
+
+    # ---config vim---
+    # vim -c ":PlugInstall"
+
     # install nerdfont fonts for fish shell theme
     font_list=("Meslo")
     for font_name in $font_list
@@ -38,11 +90,10 @@ case $ID in
           break
       fi
     done
-    
-    # use lazygit
+
+    # ---lazygit setup---
     LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
     
-    echo "setting up lazygit-cli"
     mkdir lazygit-cli
     cd ./lazygit-cli/
     
@@ -58,33 +109,8 @@ case $ID in
     rm -rf lazygit-cli
     echo "done - lazygit-cli installed"
     
-    # ---fish setup---
-    if ! command -v fish 2>&1 >/dev/null; then
-        # install fish shell
-        echo "installing fish"
-        sudo apt-add-repository ppa:fish-shell/release-3
-        sudo apt update
-        sudo apt install -y --no-install-recommends fish
-        echo "done - fish installed"
-    fi
-
-    # install fisher fish minimal package manager
-    if ! fish -c "type -q fisher"; then
-      echo "installing fisher"
-      fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
-      if [ "${USERNAME}" != "root" ]; then
-        sudo -u $USERNAME -c fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
-      fi
-      fish -c "fisher -v"
-      echo "done - fisher installed"
-    fi
-
-    # set default shell to fish
-    # command -v fish | sudo tree -a /ect/shells
-    # sudo chsh -s $(which fish) $USER
-    
-    # dev setup
-    echo "installing git-cz"
+    # --- dev js/ts lib packages setup ---
+    echo "installing dev (git-cz)"
     package_manager=""
     
     # Check for npm
@@ -122,35 +148,7 @@ case $ID in
         ;;
     esac
 
-    echo "done - git-cz installed"
-
-    echo "installing .dotfiles"
-
-    # if this is a codespace, link automatically cloned dotfiles repo to the expected DOTFILES_PATH
-    # https://docs.github.com/en/codespaces/troubleshooting/troubleshooting-personalization-for-codespaces#troubleshooting-dotfiles
-    # simlink config files from .dotfiles using stow
-    if [[ "$CODESPACES" = "true" ]] && [[ -d /workspaces/.codespaces/.persistedshare/dotfiles ]]; then
-      # location of the *full repo* (defaults to ~/.dotfiles)
-      stow vim lazygit gitcz fish --adopt -vv -t $HOME
-    else
-      stow vim lazygit gitcz fish --adopt -vv
-    fi
-    
-    # undo stashing overwrite
-    git restore .
-    # git --reset hard
-
-    echo "done - .dotfiles installed"
-
-    # ---fish config is now available---
-    # echo "config fish"
-    # fish -c "source ~/.config/fish/config.fish"
-
-    echo "installing and configure tide"
-    fish -c "fisher update </dev/null; tide configure --auto --style=Rainbow --prompt_colors='True color' --show_time='24-hour format' --rainbow_prompt_separators=Slanted --powerline_prompt_heads=Sharp --powerline_prompt_tails=Round --powerline_prompt_style='Two lines, character' --prompt_connection=Disconnected --powerline_right_prompt_frame=No --prompt_spacing=Sparse --icons='Few icons' --transient=Yes"
-
-    # ---vim setup---
-    # vim -c ":PlugInstall"
+    echo "done - (git-cz) installed"
     ;;
   
   *)
