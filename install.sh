@@ -15,7 +15,7 @@ case $ID in
     stow \
     xdg-utils
     
-    # ---fish setup---
+    # ---fish shell setup---
     if ! command -v fish 2>&1 >/dev/null; then
         echo "installing fish"
         sudo apt-add-repository ppa:fish-shell/release-3
@@ -43,6 +43,27 @@ case $ID in
     # echo "install vim"
     # apt-get install vim
 
+    # ---nu shell setup---
+    if ! command -v nu 2>&1 >/dev/null; then
+        echo "installing nu"
+        sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        sudo apt install build-essential pkg-config libssl-dev
+        . "$HOME/.cargo/env"
+        fish -c source "$HOME/.cargo/env.fish"
+
+        cargo install nu
+        echo "done - nu installed"
+    fi
+
+    if ! command -v bob 2>&1 >/dev/null; then
+      cargo install bob-nvim
+
+      if ! command -v nvim 2>&1 >/dev/null; then
+        bob install latest
+        bob use latest
+      fi
+    fi
+
     # ---dotfiles setup---
     echo "setup .dotfiles"
 
@@ -51,9 +72,9 @@ case $ID in
     # simlink config files from .dotfiles using stow
     if [[ "$CODESPACES" = "true" ]] && [[ -d /workspaces/.codespaces/.persistedshare/dotfiles ]]; then
       # location of the *full repo* (defaults to ~/.dotfiles)
-      stow vim lazygit gitcz fish --adopt -vv -t $HOME
+      stow vim lazygit gitcz fish nu --adopt -vv -t $HOME
     else
-      stow vim lazygit gitcz fish --adopt -vv
+      stow vim lazygit gitcz fish nu --adopt -vv
     fi
     
     # undo stashing overwrite
