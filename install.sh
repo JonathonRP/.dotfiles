@@ -55,13 +55,18 @@ case $ID in
         echo "done - nu installed"
     fi
 
+    # ---nvim setup---
     if ! command -v bob 2>&1 >/dev/null; then
       cargo install bob-nvim
 
-      if ! command -v nvim 2>&1 >/dev/null; then
-        bob install latest
-        bob use latest
-      fi
+    fi
+
+    if ! command -v nvim 2>&1 >/dev/null; then
+      bob install latest
+      bob use latest
+
+      PATH=$PATH:/home/jperry/.local/share/bob/nvim-bin
+      fish -c fish_add_path /home/jperry/.local/share/bob/nvim-bin
     fi
 
     # ---dotfiles setup---
