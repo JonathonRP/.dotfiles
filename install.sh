@@ -46,10 +46,13 @@ case $ID in
     # ---nu shell setup---
     if ! command -v nu 2>&1 >/dev/null; then
         echo "installing nu"
-        sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+        sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         sudo apt install -y --no-install-recommends build-essential pkg-config libssl-dev
-        . "$HOME/.cargo/env"
-        fish -c source "$HOME/.cargo/env.fish"
+        
+        # Add .cargo/bin to PATH
+        ENV PATH="/root/.cargo/bin:${PATH}"
+        # . "$HOME/.cargo/env"
+        fish -c 'source $HOME/.cargo/env.fish'
 
         cargo install nu
         echo "done - nu installed"
@@ -66,7 +69,7 @@ case $ID in
       bob use latest
 
       PATH=$PATH:/home/jperry/.local/share/bob/nvim-bin
-      fish -c fish_add_path /home/jperry/.local/share/bob/nvim-bin
+      fish -c 'fish_add_path /home/jperry/.local/share/bob/nvim-bin'
     fi
 
     # ---dotfiles setup---
