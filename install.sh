@@ -47,7 +47,7 @@ case $ID in
     if ! command -v nu 2>&1 >/dev/null; then
         echo "installing nu"
         sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-        sudo apt install build-essential pkg-config libssl-dev
+        sudo apt install -y --no-install-recommends build-essential pkg-config libssl-dev
         . "$HOME/.cargo/env"
         fish -c source "$HOME/.cargo/env.fish"
 
