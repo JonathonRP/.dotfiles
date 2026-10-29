@@ -2,7 +2,7 @@ function fish_greeting
   set message 'Wake up, Neo...' 'The Matrix has you...' 'Follow the white rabbit.' 'Knock, knock, Neo.'
   set_color green
 
-  sleep 5
+  sleep 2
   for line in $message
     if test $line != 'Knock, knock, Neo.'
       for char in (string split '' $line)
@@ -13,9 +13,9 @@ function fish_greeting
       printf '%b' $line
     end
     if test $line != 'Follow the white rabbit.' -a $line != 'Knock, knock, Neo.'
-      sleep 3
+      sleep 0.5
     else
-      sleep 5
+      sleep 2
     end
     clear
     set -U --erase fish_greeting
